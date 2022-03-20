@@ -3,6 +3,7 @@
     <div class="page-loader-body">
         @php
             $parentCategories = 0
+            //9
         @endphp
         <div class="preloader-wrapper big active">
             <div class="spinner-layer spinner-blue">
