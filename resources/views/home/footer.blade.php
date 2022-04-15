@@ -4,7 +4,7 @@
         <div class="row row-fix justify-content-sm-center align-items-md-center row-30">
             <div class="col-md-10 col-lg-7 col-xl-4 text-xl-left"><a href="{{asset('assets')}}/index.html"><img class="inverse-logo" src="{{asset('assets')}}/images/logo-inverse-208x46.png" alt="" width="208" height="46"/></a></div>
             <div class="col-md-10 col-lg-7 col-xl-4">
-                <p class="right">&#169;&nbsp;<span class="copyright-year"></span> All Rights Reserved. Design&nbsp;by&nbsp;<a href="https://www.templatemonster.com">TemplateMonster</a></p>
+                <p class="right">&#169;&nbsp;<span class="copyright-year"></span> All Rights Reserved. Design&nbsp;by&nbsp;<a href="HErkanUzun">TemplateMonster</a></p>
             </div>
             <div class="col-md-10 col-lg-7 col-xl-4 text-xl-right">
                 <ul class="group-xs group-middle">

@@ -5,19 +5,31 @@
 
 
 @section('content')
-    <!--  page-wrapper -->
-    <div id="page-wrapper">
+    <!--PAGE CONTENT -->
+    <div id="content">
 
-        <div class="row">
-            <!-- Page Header -->
-            <div class="col-lg-12">
-                <h1 class="page-header">Blank Page</h1>
+        <div class="inner" style="min-height:1200px;">
+            <div class="row">
+                <div class="col-lg-12">
+
+
+                    <h2>Blank Page Two</h2>
+
+
+
+                </div>
             </div>
-            <!--End Page Header -->
+
+            <hr />
+
+
+
+
         </div>
 
 
 
+
     </div>
-    <!-- end page-wrapper -->
+    <!--END PAGE CONTENT -->
 @endsection

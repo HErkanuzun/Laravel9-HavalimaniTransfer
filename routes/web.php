@@ -15,7 +15,7 @@ use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 */
 //1- Do something in route
 Route::get('/hello', function () {
-    return 'Helo World';
+    return 'Hello World';
 });
 
 //2- Call view in Route

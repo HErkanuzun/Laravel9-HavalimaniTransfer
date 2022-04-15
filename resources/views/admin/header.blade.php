@@ -1,85 +1,100 @@
-<div id="wrapper">
-    <!-- navbar top -->
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
-        <!-- navbar-header -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="{{asset('assets')}}/admin/index.html">
-                <img src="{{asset('assets')}}/admin/img/logo.png" alt="" />
-            </a>
-        </div>
-        <!-- end navbar-header -->
-        <!-- navbar-top-links -->
+<!-- MAIN WRAPPER -->
+<div id="wrap">
+
+
+
+<!-- HEADER SECTION -->
+<div id="top">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top " style="padding-top: 10px;">
+        <a data-original-title="Show/Hide Menu" data-placement="bottom" data-tooltip="tooltip" class="accordion-toggle btn btn-primary btn-sm visible-xs" data-toggle="collapse" href="#menu" id="menu-toggle">
+            <i class="icon-align-justify"></i>
+        </a>
+        <!-- LOGO SECTION -->
+        <header class="navbar-header">
+
+            <a href="index.html" class="navbar-brand">
+                <img src="{{asset('assets')}}/admin/img/logo.png" alt="" /></a>
+        </header>
+        <!-- END LOGO SECTION -->
         <ul class="nav navbar-top-links navbar-right">
-            <!-- main dropdown -->
+
+            <!-- MESSAGES SECTION -->
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <span class="top-label label label-danger">3</span><i class="fa fa-envelope fa-3x"></i>
+                    <span class="label label-success">2</span>    <i class="icon-envelope-alt"></i>&nbsp; <i class="icon-chevron-down"></i>
                 </a>
-                <!-- dropdown-messages -->
+
                 <ul class="dropdown-menu dropdown-messages">
                     <li>
                         <a href="#">
                             <div>
-                                <strong><span class=" label label-danger">Andrew Smith</span></strong>
+                                <strong>John Smith</strong>
                                 <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
+                                            <em>Today</em>
+                                        </span>
                             </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing.
+                                <br />
+                                <span class="label label-primary">Important</span>
+
+                            </div>
                         </a>
                     </li>
                     <li class="divider"></li>
                     <li>
                         <a href="#">
                             <div>
-                                <strong><span class=" label label-info">Jonney Depp</span></strong>
+                                <strong>Raphel Jonson</strong>
                                 <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
+                                            <em>Yesterday</em>
+                                        </span>
                             </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing.
+                                <br />
+                                <span class="label label-success"> Moderate </span>
+                            </div>
                         </a>
                     </li>
                     <li class="divider"></li>
                     <li>
                         <a href="#">
                             <div>
-                                <strong><span class=" label label-success">Jonney Depp</span></strong>
+                                <strong>Chi Ley Suk</strong>
                                 <span class="pull-right text-muted">
-                                        <em>Yesterday</em>
-                                    </span>
+                                            <em>26 Jan 2014</em>
+                                        </span>
                             </div>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque eleifend...</div>
+                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing.
+                                <br />
+                                <span class="label label-danger"> Low </span>
+                            </div>
                         </a>
                     </li>
                     <li class="divider"></li>
                     <li>
                         <a class="text-center" href="#">
                             <strong>Read All Messages</strong>
-                            <i class="fa fa-angle-right"></i>
+                            <i class="icon-angle-right"></i>
                         </a>
                     </li>
                 </ul>
-                <!-- end dropdown-messages -->
-            </li>
 
+            </li>
+            <!--END MESSAGES SECTION -->
+
+            <!--TASK SECTION -->
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <span class="top-label label label-success">4</span>  <i class="fa fa-tasks fa-3x"></i>
+                    <span class="label label-danger">5</span>   <i class="icon-tasks"></i>&nbsp; <i class="icon-chevron-down"></i>
                 </a>
-                <!-- dropdown tasks -->
+
                 <ul class="dropdown-menu dropdown-tasks">
                     <li>
                         <a href="#">
                             <div>
                                 <p>
-                                    <strong>Task 1</strong>
+                                    <strong> Profile </strong>
                                     <span class="pull-right text-muted">40% Complete</span>
                                 </p>
                                 <div class="progress progress-striped active">
@@ -95,7 +110,7 @@
                         <a href="#">
                             <div>
                                 <p>
-                                    <strong>Task 2</strong>
+                                    <strong> Pending Tasks </strong>
                                     <span class="pull-right text-muted">20% Complete</span>
                                 </p>
                                 <div class="progress progress-striped active">
@@ -111,7 +126,7 @@
                         <a href="#">
                             <div>
                                 <p>
-                                    <strong>Task 3</strong>
+                                    <strong> Work Completed </strong>
                                     <span class="pull-right text-muted">60% Complete</span>
                                 </p>
                                 <div class="progress progress-striped active">
@@ -127,7 +142,7 @@
                         <a href="#">
                             <div>
                                 <p>
-                                    <strong>Task 4</strong>
+                                    <strong> Summary </strong>
                                     <span class="pull-right text-muted">80% Complete</span>
                                 </p>
                                 <div class="progress progress-striped active">
@@ -142,24 +157,27 @@
                     <li>
                         <a class="text-center" href="#">
                             <strong>See All Tasks</strong>
-                            <i class="fa fa-angle-right"></i>
+                            <i class="icon-angle-right"></i>
                         </a>
                     </li>
                 </ul>
-                <!-- end dropdown-tasks -->
-            </li>
 
-            <li class="dropdown">
+            </li>
+            <!--END TASK SECTION -->
+
+            <!--ALERTS SECTION -->
+            <li class="chat-panel dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <span class="top-label label label-warning">5</span>  <i class="fa fa-bell fa-3x"></i>
+                    <span class="label label-info">8</span>   <i class="icon-comments"></i>&nbsp; <i class="icon-chevron-down"></i>
                 </a>
-                <!-- dropdown alerts-->
+
                 <ul class="dropdown-menu dropdown-alerts">
+
                     <li>
                         <a href="#">
                             <div>
-                                <i class="fa fa-comment fa-fw"></i>New Comment
-                                <span class="pull-right text-muted small">4 minutes ago</span>
+                                <i class="icon-comment" ></i> New Comment
+                                <span class="pull-right text-muted small"> 4 minutes ago</span>
                             </div>
                         </a>
                     </li>
@@ -167,8 +185,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <i class="fa fa-twitter fa-fw"></i>3 New Followers
-                                <span class="pull-right text-muted small">12 minutes ago</span>
+                                <i class="icon-twitter info"></i> 3 New Follower
+                                <span class="pull-right text-muted small"> 9 minutes ago</span>
                             </div>
                         </a>
                     </li>
@@ -176,8 +194,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <i class="fa fa-envelope fa-fw"></i>Message Sent
-                                <span class="pull-right text-muted small">4 minutes ago</span>
+                                <i class="icon-envelope"></i> Message Sent
+                                <span class="pull-right text-muted small" > 20 minutes ago</span>
                             </div>
                         </a>
                     </li>
@@ -185,8 +203,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <i class="fa fa-tasks fa-fw"></i>New Task
-                                <span class="pull-right text-muted small">4 minutes ago</span>
+                                <i class="icon-tasks"></i> New Task
+                                <span class="pull-right text-muted small"> 1 Hour ago</span>
                             </div>
                         </a>
                     </li>
@@ -194,8 +212,8 @@
                     <li>
                         <a href="#">
                             <div>
-                                <i class="fa fa-upload fa-fw"></i>Server Rebooted
-                                <span class="pull-right text-muted small">4 minutes ago</span>
+                                <i class="icon-upload"></i> Server Rebooted
+                                <span class="pull-right text-muted small"> 2 Hour ago</span>
                             </div>
                         </a>
                     </li>
@@ -203,32 +221,36 @@
                     <li>
                         <a class="text-center" href="#">
                             <strong>See All Alerts</strong>
-                            <i class="fa fa-angle-right"></i>
+                            <i class="icon-angle-right"></i>
                         </a>
                     </li>
                 </ul>
-                <!-- end dropdown-alerts -->
+
             </li>
+            <!-- END ALERTS SECTION -->
+
+            <!--ADMIN SETTINGS SECTIONS -->
 
             <li class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                    <i class="fa fa-user fa-3x"></i>
+                    <i class="icon-user "></i>&nbsp; <i class="icon-chevron-down "></i>
                 </a>
-                <!-- dropdown user-->
+
                 <ul class="dropdown-menu dropdown-user">
-                    <li><a href="#"><i class="fa fa-user fa-fw"></i>User Profile</a>
+                    <li><a href="#"><i class="icon-user"></i> User Profile </a>
                     </li>
-                    <li><a href="#"><i class="fa fa-gear fa-fw"></i>Settings</a>
+                    <li><a href="#"><i class="icon-gear"></i> Settings </a>
                     </li>
                     <li class="divider"></li>
-                    <li><a href="{{asset('assets')}}/admin/login.html"><i class="fa fa-sign-out fa-fw"></i>Logout</a>
+                    <li><a href="login.html"><i class="icon-signout"></i> Logout </a>
                     </li>
                 </ul>
-                <!-- end dropdown-user -->
+
             </li>
-            <!-- end main dropdown -->
+            <!--END ADMIN SETTINGS -->
         </ul>
-        <!-- end navbar-top-links -->
 
     </nav>
-    <!-- end navbar top -->
+
+</div>
+<!-- END HEADER SECTION -->
