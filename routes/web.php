@@ -14,16 +14,15 @@ use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 |
 */
 //1- Do something in route
+
+
+
 Route::get('/hello', function () {
     return 'Hello World';
 });
 
 //2- Call view in Route
 Route::get('/welcome', function () {
-    return view('welcome');
-});
-//3- Call Controller Function
-Route::get('/',[HomeController::class, 'index'] )->name('home');
 
 //4- Route->Controller->View
 Route::get('/test', [HomeController::class, 'test'])->name('test');
@@ -34,11 +33,20 @@ Route::post('/save',[HomeController::class,'save'])->name('save');
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+    return view('welcome');
+});
+//3- Call Controller Function
+Route::get('/',[HomeController::class, 'index'] )->name('home');
+Route::get('/anasayfa',[AdminHomeController::class, 'getir'])->name("dash_cagir");
+Route::get('/category',[AdminHomeController::class, 'category_getir'])->name("cate_getir");
+
+
+
+
 
 
 
 //*************************** ADMİN PANEL ROUTES ***************************//
-
 //3- Call Controller Function
 Route::get('/admin',[AdminHomeController::class, 'index'] )->name('admin');
 
