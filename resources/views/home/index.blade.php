@@ -48,10 +48,10 @@
                             </figure>
                             <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
                         </div>
-                        <div class="event-default-inner">
-                            <h5><a class="event-default-title" href="#">Italy, Venice</a></h5><span class="heading-5">from $350</span>
+                        <div class="event-default-inner">$350</span>
                         </div>
                     </article>
+                            <h5><a class="event-default-title" href="#">Italy, Venice</a></h5><span class="heading-5">from
                 </div>
                 <div class="col-md-6 col-xl-4">
                     <article class="event-default-wrap">
