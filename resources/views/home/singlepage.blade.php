@@ -3,6 +3,16 @@
 @include("home.header")
 @section('content')
 
+<section class="breadcrumbs-custom" style="background: url(&quot;images/breadcrumbs-bg.jpg&quot;); background-size: cover;">
+  <div class="container">
+
+    <p class="heading-1 breadcrumbs-custom-title">Single Page</p>
+    <ul class="breadcrumbs-custom-path">
+      <li class="active">Single Page</li>
+    </ul>
+  </div>
+</section>
+
 <section class="section section-lg bg-default">
     <div class="container container-bigger">
       <div class="row row-fix row-50 justify-content-md-center align-items-lg-center justify-content-xl-between flex-lg-row-reverse">

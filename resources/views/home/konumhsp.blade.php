@@ -3,6 +3,16 @@
 @include("home.header")
 @section('content')
 
+<section class="breadcrumbs-custom" style="background: url(&quot;images/breadcrumbs-bg.jpg&quot;); background-size: cover;">
+	<div class="container">
+  
+	  <p class="heading-1 breadcrumbs-custom-title">Mesafe Olcer</p>
+	  <ul class="breadcrumbs-custom-path">
+		<li class="active">Mesafe Olcer</li>
+	  </ul>
+	</div>
+  </section>
+
 <!DOCTYPE html>
 	<html lang="tr">
 	<head>
@@ -73,10 +83,8 @@
 	margin-left:1%;
 	display:inline-block;
 	}
-	button {
-	height:40px;
-	width:80px;	
-	margin-left:1%;
+	.pust-button{
+		margin-top:2rem;
 	}
 
 	</style>
@@ -89,13 +97,11 @@
     <div class="col-md-6">
 	<p align="center"><input class="form-input" type="text" name="enlem1" id="enlem1"  placeholder="Enlem" >
 	<input class="form-input" type="text" name="boylam1" id="boylam1"  placeholder="Boylam"></p>
-	<p align="center"><button class="button button-secondary button-nina" id="buton1" onclick="ekle()" >Ekle</button><button class="button button-secondary button-nina" id="buton2" onclick="hesapla()">Hesapla</button><button class="button button-secondary button-nina" id="buton" onclick="sil()" >Temizle</button></p>
+	<div class="d-flex justify-content-center align-items-center">
+		<button class="button mx-1 pust-button button-secondary button-nina" id="buton1" onclick="ekle()" >Ekle</button>
+		<button class="button mx-1  button-secondary button-nina" id="buton2" onclick="hesapla()">Hesapla</button>
+		<button class="button mx-1  button-secondary button-nina" id="buton" onclick="sil()" >Temizle</button></p>
 
-		
-		
-		
-		
-	
 	</div>
 
 	<script>
