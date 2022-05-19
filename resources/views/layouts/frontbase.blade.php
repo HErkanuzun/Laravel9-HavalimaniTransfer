@@ -20,8 +20,8 @@
     @yield("head")
 </head>
 <body>
-@include("home.header")
-@include("home.slider")
+
+
 @yield('content')
 
 

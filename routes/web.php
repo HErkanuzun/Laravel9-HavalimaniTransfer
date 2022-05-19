@@ -39,11 +39,12 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/',[HomeController::class, 'index'] )->name('home');
 Route::get('/anasayfa',[AdminHomeController::class, 'getir'])->name("dash_cagir");
 Route::get('/category',[AdminHomeController::class, 'category_getir'])->name("cate_getir");
+Route::get('/singin',[HomeController::class, 'sing-in-getir'] )->name('singin-getir');
 
 
+Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts_page');
 
-
-
+Route::get('/aboutus',[HomeController::class, 'aboutus'])->name("about_us_page");
 
 
 //*************************** ADMİN PANEL ROUTES ***************************//

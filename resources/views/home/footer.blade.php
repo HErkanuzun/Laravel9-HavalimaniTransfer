@@ -1,4 +1,5 @@
 <!-- Footer Minimal-->
+</div>
 <footer class="section page-footer page-footer-minimal novi-background bg-cover text-center bg-gray-darker">
     <div class="container container-wide">
         <div class="row row-fix justify-content-sm-center align-items-md-center row-30">

@@ -4,6 +4,8 @@
 
 
 
+@include("home.header")
+@include("home.slider")
 @section('content')
     <section class="section section-variant-1 bg-default novi-background bg-cover">
         <div class="container container-wide">
