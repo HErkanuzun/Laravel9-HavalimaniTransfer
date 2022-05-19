@@ -15,6 +15,18 @@ class CreateRezervationsTable extends Migration
     {
         Schema::create('rezervations', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id');
+            $table->foreignId('transfer_id');
+            $table->foreignId('from_location_id');
+            $table->foreignId('to_location_id');
+            $table->string('price')->nullable();
+            $table->string('Airline');
+            $table->string('flightnumber');
+            $table->string('flighdate');
+            $table->string('flightime');
+            $table->string('pickuptime');
+            $table->string('note');
+            $table->string('status',10);
             $table->timestamps();
         });
     }

@@ -3,6 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
+
+use App\Http\Controllers\CategoryController;
+use Illuminate\Support\Facades\App;
+use Illuminate\Support\Facades\Http;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -50,4 +55,9 @@ Route::get('/aboutus',[HomeController::class, 'aboutus'])->name("about_us_page")
 //*************************** ADMİN PANEL ROUTES ***************************//
 //3- Call Controller Function
 Route::get('/admin',[AdminHomeController::class, 'index'] )->name('admin');
-
+Route::get('/admin/tables',[AdminHomeController::class, 'tables_getir'])->name('admin_tables');
+Route::get('/admin/billing',[AdminHomeController::class, 'billing_getir'])->name('admin_billing');
+Route::get('/admin/profile',[AdminHomeController::class, 'profile_getir'])->name('admin_profile');
+//**************************CATEGORY CONTROLLER ROUTE *************************/
+Route::get('/admin/category',[CategoryController::class, 'index'] )->name('admin_category');
+Route::get('/admin/category/create',[CategoryController::class, 'create'] )->name('admin_category_create');

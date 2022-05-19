@@ -15,6 +15,13 @@ class CreateMessagesTable extends Migration
     {
         Schema::create('messages', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('email')->unique();
+            $table->string('phone');
+            $table->string('subject')->nullable();
+            $table->string('message');
+            $table->string('ip');
+            $table->string('status',10);
             $table->timestamps();
         });
     }

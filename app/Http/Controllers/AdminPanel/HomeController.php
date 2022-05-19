@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     //
-    public function index(){
-           return view("admin.index");
+    public function index()
+    {
+        return view("admin.index");
     }
     public function getir()
     {
@@ -19,4 +20,19 @@ class HomeController extends Controller
     {
         return view("admin.category");
     }
+    public function tables_getir()
+    {
+        return view('admin.tables');
+    }
+
+    public function billing_getir()
+    {
+        return view('admin.billing');
+    }
+
+    public function profile_getir()
+    {
+        return view('admin.profile');
+    }
+
 }
