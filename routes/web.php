@@ -58,6 +58,8 @@ Route::get('/admin',[AdminHomeController::class, 'index'] )->name('admin');
 Route::get('/admin/tables',[AdminHomeController::class, 'tables_getir'])->name('admin_tables');
 Route::get('/admin/billing',[AdminHomeController::class, 'billing_getir'])->name('admin_billing');
 Route::get('/admin/profile',[AdminHomeController::class, 'profile_getir'])->name('admin_profile');
+Route::get('/singin',[AdminHomeController::class, 'singin_getir'])->name('admin_singin');
+Route::get('/singup',[AdminHomeController::class, 'singup_getir'])->name('admin_singup');
 //**************************CATEGORY CONTROLLER ROUTE *************************/
 Route::get('/admin/category',[CategoryController::class, 'index'] )->name('admin_category');
 Route::get('/admin/category/create',[CategoryController::class, 'create'] )->name('admin_category_create');

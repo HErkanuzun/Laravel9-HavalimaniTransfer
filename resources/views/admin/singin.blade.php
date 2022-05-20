@@ -1,17 +1,4 @@
-<!--
-=========================================================
-* Soft UI Dashboard - v1.0.5
-=========================================================
 
-* Product Page: https://www.creative-tim.com/product/soft-ui-dashboard
-* Copyright 2022 Creative Tim (https://www.creative-tim.com)
-* Licensed under MIT (https://www.creative-tim.com/license)
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +8,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{asset('assets')}}/img/apple-icon.png">
     <link rel="icon" type="image/png" href="{{asset('assets')}}/img/favicon.png">
     <title>
-        Soft UI Dashboard by Creative Tim
+        Erkan's Sing IN
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -67,7 +54,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link me-2" href="../pages/sign-up.html">
+                                <a class="nav-link me-2" href="http://127.0.0.1:8000/singup">
                                     <i class="fas fa-user-circle opacity-6 text-dark me-1"></i>
                                     Sign Up
                                 </a>

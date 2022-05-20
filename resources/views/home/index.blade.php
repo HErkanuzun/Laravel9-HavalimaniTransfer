@@ -1,6 +1,6 @@
 @extends('layouts.frontbase')
 
-@section('title','Airport Project')
+@section('title','')
 
 
 
