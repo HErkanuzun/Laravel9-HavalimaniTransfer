@@ -1,5 +1,6 @@
 @extends('layouts.adminbase')
 @section('title',"Dashboard")
+@section('page','Billing')
 @section('content')
 
 

@@ -94,7 +94,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link @if($link==4) active @endif " href="{{asset('assets')}}/pages/virtual-reality.html">
+                <a class="nav-link @if($link==4) active @endif " href="http://127.0.0.1:8000/admin/category">
                     <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         <svg width="12px" height="12px" viewBox="0 0 42 42" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <title>box-3d-50</title>
@@ -111,7 +111,7 @@
                             </g>
                         </svg>
                     </div>
-                    <span class="nav-link-text ms-1">Virtual Reality</span>
+                    <span class="nav-link-text ms-1">Category</span>
                 </a>
             </li>
             <li class="nav-item">
@@ -180,7 +180,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link @if($link==6) active @endif " href="{{asset('assets')}}../pages/sign-up.html">
+                <a class="nav-link @if($link==8) active @endif " href="{{asset('assets')}}../pages/sign-up.html">
                     <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                         <svg width="12px" height="20px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <title>spaceship</title>

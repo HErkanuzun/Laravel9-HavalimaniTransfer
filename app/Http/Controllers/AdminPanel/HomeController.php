@@ -9,19 +9,16 @@ class HomeController extends Controller
 {
     public function index()
     {
-        return view("admin.index",
-    ['link'=>1]);
+        return view("admin.index", ['link'=>1]);
     }
 
     public function getir()
     {
         return view("admin.index");
     }
+    //************  category  ************
 
-    public function category_getir()
-    {
-        return view("admin.category");
-    }
+    //************  category end ************
 
     public function tables_getir()
     {

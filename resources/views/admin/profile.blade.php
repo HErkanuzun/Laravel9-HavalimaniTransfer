@@ -1,5 +1,6 @@
 @extends('layouts.adminbase')
-@section('title',"Dashboard")
+@section('title',"Profile")
+@section('page','Profile')
 @section('content')
 
 <div class="container-fluid">

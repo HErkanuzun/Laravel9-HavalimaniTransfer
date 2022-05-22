@@ -12,9 +12,9 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function category_getir()
     {
-        echo 'Category Created';
+        return view("admin.category.index", ['link'=>4]);
     }
 
     /**
@@ -22,9 +22,9 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function category_create()
     {
-        echo 'Create Created';
+        return view("admin.category.create", ['link'=>4]);
     }
 
     /**

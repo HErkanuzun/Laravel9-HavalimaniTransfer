@@ -52,6 +52,8 @@ Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts_pag
 Route::get('/aboutus',[HomeController::class, 'aboutus'])->name("about_us_page");
 
 
+
+Route::middleware('auth')->group(function (){
 //*************************** ADMİN PANEL ROUTES ***************************//
 //3- Call Controller Function
 Route::get('/admin',[AdminHomeController::class, 'index'] )->name('admin');
@@ -60,6 +62,11 @@ Route::get('/admin/billing',[AdminHomeController::class, 'billing_getir'])->name
 Route::get('/admin/profile',[AdminHomeController::class, 'profile_getir'])->name('admin_profile');
 Route::get('/singin',[AdminHomeController::class, 'singin_getir'])->name('admin_singin');
 Route::get('/singup',[AdminHomeController::class, 'singup_getir'])->name('admin_singup');
+Route::get('/profile',[AdminHomeController::class, 'profile_getir'])->name('admin_profile');
+
 //**************************CATEGORY CONTROLLER ROUTE *************************/
-Route::get('/admin/category',[CategoryController::class, 'index'] )->name('admin_category');
-Route::get('/admin/category/create',[CategoryController::class, 'create'] )->name('admin_category_create');
+Route::get('/admin/category',[CategoryController::class, 'category_getir'] )->name('admin_category');
+Route::get('/admin/category/create',[CategoryController::class, 'category_create'] )->name('admin_category_create');
+
+
+});
