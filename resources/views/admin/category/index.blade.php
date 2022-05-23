@@ -23,6 +23,7 @@
                   <tr>
                     <th scope="col">id</th>
                     <th scope="col">parent_id</th>
+                    <th scope="col">image</th>
                     <th scope="col">title</th>
                     <th scope="col">keywords</th>
                     <th scope="col">Actions</th>
@@ -36,10 +37,13 @@
                   <tr>
                     <th scope="row">{{$item->id}}</th>
                     <td>{{$item->parent_id}}</td>
+                    <td>{{$item->image}}</td>
                     <td>{{$item->title}}</td>
                     <td>{{$item->keywords}}</td>
                     <td>
-                      <a href="{{route('admin_category_edit',['id'=>$item->id])}}" class="btn btn-warning">Edit</a>
+                      
+                      <a href="{{route('admin_category_edit',['id'=>$ite
+                      m->id])}}" class="btn btn-warning">Edit</a>
                       <a href="{{route('admin_category_show',['id'=>$item->id])}}" class="btn btn-success">Show</a>
                       <a href="{{route('admin_category_delete',['id'=>$item->id])}}" class="btn btn-danger">Delete</a>
                     </td>

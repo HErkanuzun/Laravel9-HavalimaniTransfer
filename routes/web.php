@@ -71,7 +71,7 @@ Route::get('/admin/category/create',[CategoryController::class, 'category_create
 Route::post('/admin/category/store',[CategoryController::class, 'category_store'] )->name('admin_category_store');
 Route::get('/admin/category/edit/{id}',[CategoryController::class, 'edit'] )->name('admin_category_edit');
 Route::post('/admin/category/update/{id}',[CategoryController::class, 'update'] )->name('admin_category_update');
-Route::post('/admin/category/show/{id}',[CategoryController::class, 'category_store'] )->name('admin_category_show');
+Route::get('/admin/category/show/{id}',[CategoryController::class, 'category_store'] )->name('admin_category_show');
 Route::get('/admin/category/delete/{id}',[CategoryController::class, 'destroy'] )->name('admin_category_delete');
 
 //*****************************deneme sayfasi************************

@@ -66,7 +66,8 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        //
+        $myshow=Category::find($id);
+        return view('admin.category.show',['link'=>4]);
     }
 
     /**
