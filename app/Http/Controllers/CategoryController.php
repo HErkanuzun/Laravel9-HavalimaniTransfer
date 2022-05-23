@@ -17,6 +17,11 @@ class CategoryController extends Controller
         return view("admin.category.index", ['link'=>4]);
     }
 
+    public function category_deneme()
+    {
+        return view("admin.category.addlocation", ['link'=>5]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -33,9 +38,9 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function category_store(Request $request)
     {
-        //
+        return view("admin.category.edit",['link'=>4]);
     }
 
     /**

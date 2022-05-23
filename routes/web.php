@@ -60,6 +60,7 @@ Route::get('/admin',[AdminHomeController::class, 'index'] )->name('admin');
 Route::get('/admin/tables',[AdminHomeController::class, 'tables_getir'])->name('admin_tables');
 Route::get('/admin/billing',[AdminHomeController::class, 'billing_getir'])->name('admin_billing');
 Route::get('/admin/profile',[AdminHomeController::class, 'profile_getir'])->name('admin_profile');
+//additional
 Route::get('/singin',[AdminHomeController::class, 'singin_getir'])->name('admin_singin');
 Route::get('/singup',[AdminHomeController::class, 'singup_getir'])->name('admin_singup');
 Route::get('/profile',[AdminHomeController::class, 'profile_getir'])->name('admin_profile');
@@ -67,6 +68,10 @@ Route::get('/profile',[AdminHomeController::class, 'profile_getir'])->name('admi
 //**************************CATEGORY CONTROLLER ROUTE *************************/
 Route::get('/admin/category',[CategoryController::class, 'category_getir'] )->name('admin_category');
 Route::get('/admin/category/create',[CategoryController::class, 'category_create'] )->name('admin_category_create');
+Route::post('/admin/category/store',[CategoryController::class, 'category_store'] )->name('admin_category_store');
+
+//*****************************deneme sayfasi************************
+Route::get('/admin/denemecreate',[CategoryController::class, 'category_deneme'] )->name('admin_category_create_deneme');
 
 
 });
