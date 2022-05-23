@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\Types\Parent_;
 
 class CategoryController extends Controller
 {
@@ -14,7 +15,11 @@ class CategoryController extends Controller
      */
     public function category_getir()
     {
-        return view("admin.category.index", ['link'=>4]);
+        $categories=Category::all();
+        return view("admin.category.index", [
+            'link'=>4,
+            'categories'=>$categories
+        ]);
     }
 
     public function category_deneme()
@@ -40,7 +45,17 @@ class CategoryController extends Controller
      */
     public function category_store(Request $request)
     {
-        return view("admin.category.edit",['link'=>4]);
+        $data= new Category;
+        $data->parent_id = 0;
+        $data->title= $request->title;
+        $data->status= $request->status;
+
+        $data->keywords=$request->keywords;
+        $data->description=$request->description;
+        $data->image=$request->image;
+
+        $data->save();
+        return redirect(route('admin_category'));
     }
 
     /**
@@ -60,9 +75,11 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function edit(Category $category)
+
+    public function edit($id)
     {
-        //
+        $myedit=Category::find($id);
+        return view("admin.category.edit", ['edit'=>$myedit, 'link'=>4]);
     }
 
     /**
@@ -83,9 +100,11 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Category $category)
+    public function destroy(Category $category,$id)
     {
-        //
+        $category=Category::find($id);
+        $category->delete();
+        return redirect(route('admin_category'));
     }
     
 }
