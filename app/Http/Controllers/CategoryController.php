@@ -22,11 +22,6 @@ class CategoryController extends Controller
         ]);
     }
 
-    public function category_deneme()
-    {
-        return view("admin.category.addlocation", ['link'=>5]);
-    }
-
     /**
      * Show the form for creating a new resource.
      *
@@ -53,6 +48,10 @@ class CategoryController extends Controller
         $data->keywords=$request->keywords;
         $data->description=$request->description;
         $data->image=$request->image;
+        if($request->file('image'))
+        {
+            $data->image=$request->file('image')->store('images');
+        }
 
         $data->save();
         return redirect(route('admin_category'));
@@ -64,7 +63,7 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function show(Category $category)
+    public function show(Category $category,$id)
     {
         $myshow=Category::find($id);
         return view('admin.category.show',['link'=>4]);
@@ -80,7 +79,8 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $myedit=Category::find($id);
-        return view("admin.category.edit", ['edit'=>$myedit, 'link'=>4]);
+        $myeditlist=Category::all();
+        return view("admin.category.edit", ['edit'=>$myedit, 'myeditlist'=>$myeditlist, 'link'=>4]);
     }
 
     /**
@@ -90,9 +90,25 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Category $category)
+    public function update(Request $request,$id,Category $category)
     {
-        //
+
+        $data=Category::find($id);
+
+        $data->parent_id = 0;
+        $data->title= $request->title;
+        $data->status= $request->status;
+        $data->keywords=$request->keywords;
+        $data->description=$request->description;
+        $data->image=$request->image;
+        if($request->file('image'))
+        {
+            $data->image=$request->file('image')->store('images');
+        }
+
+        $data->save();
+
+        return view('admin/category/index');
     }
 
     /**

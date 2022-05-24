@@ -21,10 +21,10 @@
         <input type="text" name="description" class="form-control" id="exampleInputDescription1" value="{{$edit->description}}" placeholder="Description">
       </div>
       <div>      
-        <label>Status</label>
+        <label>Aveilable</label>
         <select class="form-control" name="status">
-          <option selected="selected">False</option>
-          <option>True</option>
+          <option selected="selected">Yes</option>
+          <option>No</option>
         </select></div>
 
 

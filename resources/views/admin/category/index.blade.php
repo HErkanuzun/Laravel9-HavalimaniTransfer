@@ -42,8 +42,7 @@
                     <td>{{$item->keywords}}</td>
                     <td>
                       
-                      <a href="{{route('admin_category_edit',['id'=>$ite
-                      m->id])}}" class="btn btn-warning">Edit</a>
+                      <a href="{{route('admin_category_edit',['id'=>$item->id])}}" class="btn btn-warning">Edit</a>
                       <a href="{{route('admin_category_show',['id'=>$item->id])}}" class="btn btn-success">Show</a>
                       <a href="{{route('admin_category_delete',['id'=>$item->id])}}" class="btn btn-danger">Delete</a>
                     </td>
@@ -58,7 +57,7 @@
     </div>
     <div class="row">
       <div class="col-12">
-        <div class="card mb-4">
+        <div class="card mb-4"> 
           <div class="card-header pb-0">
             <h6>Projects table</h6>
           </div>

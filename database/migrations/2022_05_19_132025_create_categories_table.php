@@ -20,7 +20,7 @@ class CreateCategoriesTable extends Migration
             $table->string('keywords');
             $table->string('description')->nullable();
             $table->string('image')->nullable();
-            $table->string('status', 6);
+            $table->string('status', 20);
             $table->timestamps();
 
         });

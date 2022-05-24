@@ -60,6 +60,7 @@ Route::get('/admin',[AdminHomeController::class, 'index'] )->name('admin');
 Route::get('/admin/tables',[AdminHomeController::class, 'tables_getir'])->name('admin_tables');
 Route::get('/admin/billing',[AdminHomeController::class, 'billing_getir'])->name('admin_billing');
 Route::get('/admin/profile',[AdminHomeController::class, 'profile_getir'])->name('admin_profile');
+Route::get('/admin/addroute',[AdminHomeController::class, 'route_getir'])->name('admin_add_route');
 //additional
 Route::get('/singin',[AdminHomeController::class, 'singin_getir'])->name('admin_singin');
 Route::get('/singup',[AdminHomeController::class, 'singup_getir'])->name('admin_singup');
@@ -75,7 +76,6 @@ Route::get('/admin/category/show/{id}',[CategoryController::class, 'category_sto
 Route::get('/admin/category/delete/{id}',[CategoryController::class, 'destroy'] )->name('admin_category_delete');
 
 //*****************************deneme sayfasi************************
-Route::get('/admin/denemecreate',[CategoryController::class, 'category_deneme'] )->name('admin_category_create_deneme');
 
 
 });
