@@ -41,10 +41,10 @@ class LocationController extends Controller
     public function admin_location_store(Request $request)
     {
         $data= new Location;
+        $data->id= $request->id;
         $data->type= $request->type;
         $data->name= $request->name;
 
-        $data->name=$request->name;
         $data->lat=$request->lat;
         $data->long=$request->long;
         $data->status=$request->status;
