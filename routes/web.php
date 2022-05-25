@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 
+use App\Http\Controllers\LocationController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Http;
@@ -19,8 +20,6 @@ use Illuminate\Support\Facades\Http;
 |
 */
 //1- Do something in route
-
-
 
 Route::get('/hello', function () {
     return 'Hello World';
@@ -44,7 +43,6 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::get('/',[HomeController::class, 'index'] )->name('home');
 Route::get('/anasayfa',[AdminHomeController::class, 'getir'])->name("dash_cagir");
 Route::get('/category',[AdminHomeController::class, 'category_getir'])->name("cate_getir");
-Route::get('/singin',[HomeController::class, 'sing-in-getir'] )->name('singin-getir');
 
 
 Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts_page');
@@ -60,7 +58,7 @@ Route::get('/admin',[AdminHomeController::class, 'index'] )->name('admin');
 Route::get('/admin/tables',[AdminHomeController::class, 'tables_getir'])->name('admin_tables');
 Route::get('/admin/billing',[AdminHomeController::class, 'billing_getir'])->name('admin_billing');
 Route::get('/admin/profile',[AdminHomeController::class, 'profile_getir'])->name('admin_profile');
-Route::get('/admin/addroute',[AdminHomeController::class, 'route_getir'])->name('admin_add_route');
+Route::get('/admin/location',[AdminHomeController::class, 'location_getir'])->name('admin_add_location');
 //additional
 Route::get('/singin',[AdminHomeController::class, 'singin_getir'])->name('admin_singin');
 Route::get('/singup',[AdminHomeController::class, 'singup_getir'])->name('admin_singup');
@@ -75,7 +73,18 @@ Route::post('/admin/category/update/{id}',[CategoryController::class, 'update'] 
 Route::get('/admin/category/show/{id}',[CategoryController::class, 'category_store'] )->name('admin_category_show');
 Route::get('/admin/category/delete/{id}',[CategoryController::class, 'destroy'] )->name('admin_category_delete');
 
-//*****************************deneme sayfasi************************
+//*****************************LOCATION CONTROLLER ROUTE************************
+Route::get('/admin/location',[LocationController::class, 'admin_location'] )->name('admin_location');
+Route::get('/admin/location/create',[LocationController::class, 'admin_location_create'] )->name('admin_location_create');
+Route::post('/admin/location/store',[LocationController::class, 'admin_location_store'] )->name('admin_location_store');
+Route::get('/admin/location/show{id}',[LocationController::class, 'admin_location_show'] )->name('admin_location_show');
+Route::get('/admin/location/edit{id}',[LocationController::class, 'admin_location_edit'] )->name('admin_location_edit');
+Route::post('/admin/location/update{id}',[LocationController::class, 'admin_location_update'] )->name('admin_location_update');
+Route::get('/admin/location/delete{id}',[LocationController::class, 'admin_location_delete'] )->name('admin_location_delete');
+
+
+
+
 
 
 });

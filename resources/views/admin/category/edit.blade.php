@@ -3,7 +3,7 @@
 @section('page',"Edit Category $edit->title ")
 @section('content')
 
-<form role="form" action="{{route('admin_category_update',['id'=>$edit])}}" method="post">
+<form role="form" action="{{route('admin_category_update',['id'=>$edit->id])}}" method="post">
     @csrf
 
     <div class="form-group">
@@ -20,12 +20,15 @@
         <label for="exampleInputPassword1">Description</label>
         <input type="text" name="description" class="form-control" id="exampleInputDescription1" value="{{$edit->description}}" placeholder="Description">
       </div>
-      <div>      
-        <label>Aveilable</label>
-        <select class="form-control" name="status">
-          <option selected="selected">Yes</option>
-          <option>No</option>
-        </select></div>
+
+        <div class="form-group">
+			<label for="exampleFormControlSelect1">Status</label>
+				<select class="form-control form-control-lg" name="status">
+					<option value="{{$edit->status}}" >{{$edit->status==1?"True":"False"}}</option>
+					<option value="1">True</option>
+					<option value="2">False</option>
+				</select>
+		</div>
 
 
       <div class="form-group">

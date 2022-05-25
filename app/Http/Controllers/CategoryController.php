@@ -76,7 +76,8 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function edit($id)
+    public function edit(Category $category,$id)
+    
     {
         $myedit=Category::find($id);
         $myeditlist=Category::all();
@@ -90,7 +91,7 @@ class CategoryController extends Controller
      * @param  \App\Models\Category  $category
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request,$id,Category $category)
+    public function update(Request $request,Category $category,$id)
     {
 
         $data=Category::find($id);
@@ -108,7 +109,7 @@ class CategoryController extends Controller
 
         $data->save();
 
-        return view('admin/category/index');
+        return redirect(route('admin_category_update'));
     }
 
     /**

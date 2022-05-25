@@ -99,7 +99,7 @@
                                 </li>
                                 <li><a href="{{asset('assets')}}/typography.html">Typography</a>
                                 </li>
-                                <li><a href="http://127.0.0.1:8000/login">Login</a>
+                                <li><a href="http://127.0.0.1:8000/singin">Sing in</a>
                             </ul>
                         </div>
                     </div>

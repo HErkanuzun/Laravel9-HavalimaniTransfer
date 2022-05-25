@@ -1,9 +1,5 @@
 @extends('layouts.frontbase')
-
 @section('title','')
-
-
-
 @include("home.header")
 @include("home.slider")
 @section('content')

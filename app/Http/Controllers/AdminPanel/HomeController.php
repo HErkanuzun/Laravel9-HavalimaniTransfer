@@ -46,8 +46,4 @@ class HomeController extends Controller
     }
 
 
-    public function route_getir()
-    {
-        return view('admin.category.addtour',['link'=>5]);
-    }
 }

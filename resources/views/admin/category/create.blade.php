@@ -1,5 +1,5 @@
 @extends('layouts.adminbase')
-@section('title',"Admin/category/create")
+@section('title',"Location")
 @section('page','Admin/category/create')
 @section('content')
 
