@@ -6,16 +6,16 @@
 <form role="form" action="/admin/location/store" method="post">
   @csrf
     <div class="container">
-      <div class="row">
+      <div class="row-2">
         <select class="form-select" aria-label="Default select example" name="type">
           <option selected>Type</option>
-          <option value="1">Airport</option>
-          <option value="2">City</option>
+          <option value="Airport">Airport</option>
+          <option value="City">City</option>
         </select>
 
           <div class="col ">
-            <label for="exampleDataList" class="form-label" name="name">Add Your Location name</label>
-            <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Type to Location">
+            <label for="exampleDataList" class="form-label" >Add Your Location name</label>
+            <input class="form-control" list="datalistOptions" id="exampleDataList" name="name" placeholder="Type to Location">
            <datalist id="datalistOptions">
               <option value="Turkey, Istanbul">
               <option value="Turkey, Ankara">
@@ -24,8 +24,8 @@
               <option value="Italy, Rome">
            </div>
           <div class="col">
-            <label for="exampleDataList" class="form-label" name="lat">Add Your Lat</label>
-            <input class="form-control" list="datalistOptions1" id="exampleDataList1" placeholder="Lat">
+            <label for="exampleDataList" class="form-label" >Add Your Lat</label>
+            <input class="form-control" list="datalistOptions1" id="exampleDataList1" name="lat" placeholder="Lat">
             <datalist id="datalistOptions1">
               <option value="Istanbul,41.0082">
               <option value="Ankara,39.9334">
@@ -34,8 +34,8 @@
               <option value="It, Rome, 41.89193">
           </div>
           <div class="col ">
-            <label for="exampleDataList2" class="form-label" name="long">Add Your Long</label>
-            <input class="form-control" list="datalistOptions2" id="exampleDataList2" placeholder="Long">
+            <label for="exampleDataList2" class="form-label" >Add Your Long</label>
+            <input class="form-control" list="datalistOptions2" id="exampleDataList2" name="long" placeholder="Long">
             <datalist id="datalistOptions2">
               <option value="Istanbul, 28.9784">
               <option value="Ankara, 32.8597">
@@ -44,14 +44,14 @@
               <option value="It, Rome, 12.51133">
           </div>
   
-          <div class="col-2">
-            <label for="exampleDataList" class="form-label"name="status">Status</label>
+          <div class="col-4">
+            <label for="exampleDataList" class="form-label" >Status</label>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <input class="form-check-input" type="radio"  name="status" id="inlineRadio1" value="Unavailable">
               <label class="form-check-label" for="inlineRadio1">Unavailable</label>
             </div>
             <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <input class="form-check-input" type="radio"  name="status" id="inlineRadio2" value="Available">
               <label class="form-check-label" for="inlineRadio2">Available</label>
             </div>
                 <div class="col-1">

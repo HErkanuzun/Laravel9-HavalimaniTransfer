@@ -2,23 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Location;
+use App\Models\Transfer;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\Types\Parent_;
 
-class LocationController extends Controller
+class TransferController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function admin_location()
+    public function admin_transfer()
     {
-        $locations=Location::all();
-        return view("admin.location.index",[
-            'link'=>5,
-            'locations'=>$locations
+        $transfers=Transfer::all();
+        return view("admin.transfer.index",[
+            'link'=>6,
+            'transfers'=>$transfers
         ]);
     }
 
@@ -27,9 +27,9 @@ class LocationController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function admin_location_create()
+    public function admin_transfer_create()
     { 
-        return view("admin.location.create", ['link'=>5]);
+        return view("admin.transfer.create", ['link'=>6]);
     }
 
     /**
@@ -38,9 +38,9 @@ class LocationController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function admin_location_store(Request $request)
+    public function admin_transfer_store(Request $request)
     {
-        $data= new Location;
+        $data= new Transfer;
         $data->id= $request->id;
         $data->type= $request->type;
         $data->name= $request->name;
@@ -50,43 +50,43 @@ class LocationController extends Controller
         $data->status=$request->status;
         
         $data->save();
-        return redirect(route('admin_location'));
+        return redirect(route('admin_transfer'));
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Location  $location
+     * @param  \App\Models\Transfer  $transfer
      * @return \Illuminate\Http\Response
      */
-    public function admin_location_show(Location $location, $id)
+    public function admin_transfer_show(Transfer $transfer, $id)
     {
-        $locationshow=Location::find($id);
-        return view('admin.location.show',['link'=>5]);
+        $transferhow=Transfer::find($id);
+        return view('admin.transfer.show',['link'=>6]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Location  $location
+     * @param  \App\Models\Transfer  $transfer
      * @return \Illuminate\Http\Response
      */
-    public function admin_location_edit(Location $location, $id)
+    public function admin_transfer_edit(Transfer $transfer, $id)
     {
-        $mylocationedit=Location::find($id);
-        return view("admin.location.edit",['edit'=>$mylocationedit, 'link'=>5]);
+        $mytransferedit=Transfer::find($id);
+        return view("admin.transfer.edit",['edit'=>$mytransferedit, 'link'=>6]);
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Location  $location
+     * @param  \App\Models\Transfer  $transfer
      * @return \Illuminate\Http\Response
      */
-    public function admin_location_update(Request $request, Location $location, $id)
+    public function admin_transfer_update(Request $request, Transfer $transfer, $id)
     {
-        $data=Location::find($id);
+        $data=Transfer::find($id);
 
         $data->id= $request->id;
         $data->type= $request->type;
@@ -97,21 +97,21 @@ class LocationController extends Controller
         
         $data->save();
 
-        //return redirect(route('admin.location.update'));
-        return redirect()->route('admin_location')->with(['message'=> 'Successfully update!!']);
+        //return redirect(route('admin.transfer.update'));
+        return redirect()->route('admin_transfer')->with(['message'=> 'Successfully update!!']);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Location  $location
+     * @param  \App\Models\Transfer  $transfer
      * @return \Illuminate\Http\Response
      */
-    public function admin_location_delete(Location $location, $id)
+    public function admin_transfer_delete(Transfer $transfer, $id)
     {
-        $location=Location::find($id);
-        $location->delete();
-        return redirect()->route('admin_location')->with(['message'=> 'Successfully deleted!!']);
+        $transfer=Transfer::find($id);
+        $transfer->delete();
+        return redirect()->route('admin_transfer')->with(['message'=> 'Successfully deleted!!']);
     }
     
 }

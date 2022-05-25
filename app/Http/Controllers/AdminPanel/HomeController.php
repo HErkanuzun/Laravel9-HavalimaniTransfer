@@ -32,17 +32,17 @@ class HomeController extends Controller
 
     public function profile_getir()
     {
-        return view('admin.profile',['link'=>6]);
+        return view('admin.profile',['link'=>7]);
     }
 
     public function singin_getir()
     {
-        return view('admin.singin',['link'=>7]);
+        return view('admin.singin',['link'=>8]);
     }
 
     public function singup_getir()
     {
-        return view('admin.singup',['link'=>8]);
+        return view('admin.singup',['link'=>9]);
     }
 
 

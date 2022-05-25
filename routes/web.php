@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 
+use App\Http\Controllers\TransferController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\App;
@@ -70,18 +71,28 @@ Route::get('/admin/category/create',[CategoryController::class, 'category_create
 Route::post('/admin/category/store',[CategoryController::class, 'category_store'] )->name('admin_category_store');
 Route::get('/admin/category/edit/{id}',[CategoryController::class, 'edit'] )->name('admin_category_edit');
 Route::post('/admin/category/update/{id}',[CategoryController::class, 'update'] )->name('admin_category_update');
-Route::get('/admin/category/show/{id}',[CategoryController::class, 'category_store'] )->name('admin_category_show');
+Route::get('/admin/category/show/{id}',[CategoryController::class, 'show'] )->name('admin_category_show');
 Route::get('/admin/category/delete/{id}',[CategoryController::class, 'destroy'] )->name('admin_category_delete');
 
 //*****************************LOCATION CONTROLLER ROUTE************************
 Route::get('/admin/location',[LocationController::class, 'admin_location'] )->name('admin_location');
 Route::get('/admin/location/create',[LocationController::class, 'admin_location_create'] )->name('admin_location_create');
 Route::post('/admin/location/store',[LocationController::class, 'admin_location_store'] )->name('admin_location_store');
-Route::get('/admin/location/show{id}',[LocationController::class, 'admin_location_show'] )->name('admin_location_show');
-Route::get('/admin/location/edit{id}',[LocationController::class, 'admin_location_edit'] )->name('admin_location_edit');
-Route::post('/admin/location/update{id}',[LocationController::class, 'admin_location_update'] )->name('admin_location_update');
-Route::get('/admin/location/delete{id}',[LocationController::class, 'admin_location_delete'] )->name('admin_location_delete');
+Route::get('/admin/location/show/{id}',[LocationController::class, 'admin_location_show'] )->name('admin_location_show');
+Route::get('/admin/location/edit/{id}',[LocationController::class, 'admin_location_edit'] )->name('admin_location_edit');
+Route::post('/admin/location/update/{id}',[LocationController::class, 'admin_location_update'] )->name('admin_location_update');
+Route::get('/admin/location/delete/{id}',[LocationController::class, 'admin_location_delete'] )->name('admin_location_delete');
 
+
+//*************************TRANSFER CONTROLLER ROUTE ******************************/
+
+Route::get('/admin/transfer',[TransferController::class, 'admin_transfer'] )->name('admin_transfer');
+Route::get('/admin/transfer/create',[TransferController::class, 'admin_transfer_create'] )->name('admin_transfer_create');
+Route::post('/admin/transfer/store',[TransferController::class, 'admin_transfer_store'] )->name('admin_transfer_store');
+Route::get('/admin/transfer/show/{id}',[TransferController::class, 'admin_transfer_show'] )->name('admin_transfer_show');
+Route::get('/admin/transfer/edit/{id}',[TransferController::class, 'admin_transfer_edit'] )->name('admin_transfer_edit');
+Route::post('/admin/transfer/update/{id}',[TransferController::class, 'admin_transfer_update'] )->name('admin_transfer_update');
+Route::get('/admin/transfer/delete/{id}',[TransferController::class, 'admin_transfer_delete'] )->name('admin_transfer_delete');
 
 
 

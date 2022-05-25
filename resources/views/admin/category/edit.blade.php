@@ -3,7 +3,7 @@
 @section('page',"Edit Category $edit->title ")
 @section('content')
 
-<form role="form" action="{{route('admin_category_update',['id'=>$edit->id])}}" method="post">
+<form role="form" action="{{route('admin_location_update',['id'=>$edit->id])}}" method="post">
     @csrf
 
     <div class="form-group">
@@ -25,8 +25,8 @@
 			<label for="exampleFormControlSelect1">Status</label>
 				<select class="form-control form-control-lg" name="status">
 					<option value="{{$edit->status}}" >{{$edit->status==1?"True":"False"}}</option>
-					<option value="1">True</option>
-					<option value="2">False</option>
+					<option value="true">True</option>
+					<option value="false">False</option>
 				</select>
 		</div>
 
@@ -36,8 +36,7 @@
         <input type="file" name="imgselector" class="form-control-file" value="{{$edit->image}}" id="exampleFormControlFile1">
       </div>
       <button type="submit" class="btn btn-default">Save</button>
-
-
+    
     </div>
   </form>
 
