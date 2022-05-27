@@ -13,7 +13,7 @@
           <div class="card-header pb-0">
             <h6>Category Table</h6>
             <li class="nav-item d-flex align-items-center">
-              <a class="btn btn-sm mb-0 me-3" href="http://127.0.0.1:8000/admin/category/create">Create Category</a>
+              <a class="btn btn-sm mb-0 me-3" href="http://127.0.0.1:8000/admin/transfer/create">Create Transfer</a>
           
           </div>
           <div class="card-body px-0 pt-0 pb-2">
@@ -22,28 +22,34 @@
                 <thead>
                   <tr>
                     <th scope="col">id</th>
-                    <th scope="col">parent_id</th>
-                    <th scope="col">image</th>
                     <th scope="col">title</th>
                     <th scope="col">keywords</th>
+                    <th scope="col">description</th>
+                    <th scope="col">image</th>
+                    <th scope="col">category_id</th>
+                    <th scope="col">detail</th>
+                    <th scope="col">base_price</th>
+                    <th scope="col">km_price</th>
+                    <th scope="col">capasity</th>
                     <th scope="col">Actions</th>
 
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ($categories as $item )
+                  @foreach ($transfers as $item )
                     
                  
                   <tr>
                     <th scope="row">{{$item->id}}</th>
-                    <td>{{$item->parent_id}}</td>
-                    <td>
-											@if($item->image)
-											<img src="{{Storage::url($item->image)}}" style="height: 50px">
-											@endif
-										</td>
                     <td>{{$item->title}}</td>
                     <td>{{$item->keywords}}</td>
+                    <td>{{$item->description}}</td>
+                    <td>{{$item->image}}</td>
+                    <td>{{$item->category_id}}</td>
+                    <td>{{$item->detail}}</td>
+                    <td>{{$item->base_price}}</td>
+                    <td>{{$item->km_price}}</td>
+                    <td>{{$item->capasity}}</td>
                     <td>
                       
                       <a href="{{route('admin_category_edit',['id'=>$item->id])}}" class="btn btn-warning">Edit</a>

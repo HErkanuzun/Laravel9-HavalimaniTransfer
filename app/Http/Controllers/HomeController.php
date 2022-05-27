@@ -23,6 +23,15 @@ class HomeController extends Controller
     {
         return view('home.test');
     }
+    public function home_konumhsp()
+    {
+        return view('home.konumhsp');
+    }
+    public function single_page()
+    {
+        return view('home.singlepage');
+    }
+
     public function param($id,$number)
     {
         //echo "Parameter 1:", $id;

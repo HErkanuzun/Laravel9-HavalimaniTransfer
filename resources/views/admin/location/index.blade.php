@@ -10,7 +10,6 @@
         <h6>Location Table</h6>
         <li class="nav-item d-flex align-items-center">
           <a class="btn btn-sm mb-0 me-3" href="http://127.0.0.1:8000/admin/location/create">Create Location</a>
-      
       </div>
       <div class="card-body px-0 pt-0 pb-2">
         <div class="table-responsive p-0">
@@ -52,6 +51,5 @@
     </div>
   </div>
 </div>
-
 
 @endsection

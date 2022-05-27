@@ -84,7 +84,7 @@ class LocationController extends Controller
      * @param  \App\Models\Location  $location
      * @return \Illuminate\Http\Response
      */
-    public function admin_location_update(Request $request, Location $location, $id)
+    public function admin_location_update(Request $request, Location $location,$id)
     {
         $data=Location::find($id);
 
@@ -98,7 +98,7 @@ class LocationController extends Controller
         $data->save();
 
         //return redirect(route('admin.location.update'));
-        return redirect()->route('admin_location')->with(['message'=> 'Successfully update!!']);
+        return redirect()->route('admin_location');
     }
 
     /**

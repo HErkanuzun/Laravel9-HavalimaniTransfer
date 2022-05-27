@@ -3,7 +3,7 @@
 @section('page',"Edit Category $edit->title ")
 @section('content')
 
-<form role="form" action="{{route('admin_location_update',['id'=>$edit->id])}}" method="post">
+<form role="form" action="{{route('admin_category_update',['id'=>$edit->id])}}" method="post">
     @csrf
 
     <div class="form-group">

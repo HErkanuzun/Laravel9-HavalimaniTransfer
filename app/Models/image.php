@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class image extends Model
 {
     use HasFactory;
+
+    public function Transfer()
+    {
+        return $this->belongsTo(Transfer::class);
+    }
 }

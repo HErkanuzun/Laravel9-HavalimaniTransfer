@@ -13,7 +13,7 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function category_getir()
+    public function admin_category_getir()
     {
         $categories=Category::all();
         return view("admin.category.index", [
@@ -27,7 +27,7 @@ class CategoryController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function category_create()
+    public function admin_category_create()
     {
         return view("admin.category.create", ['link'=>4]);
     }
@@ -38,7 +38,7 @@ class CategoryController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function category_store(Request $request)
+    public function admin_category_store(Request $request)
     {
         $data= new Category;
         $data->parent_id = 0;
@@ -47,7 +47,6 @@ class CategoryController extends Controller
 
         $data->keywords=$request->keywords;
         $data->description=$request->description;
-        $data->image=$request->image;
         if($request->file('image'))
         {
             $data->image=$request->file('image')->store('images');
@@ -80,8 +79,7 @@ class CategoryController extends Controller
     
     {
         $myedit=Category::find($id);
-        $myeditlist=Category::all();
-        return view("admin.category.edit", ['edit'=>$myedit, 'myeditlist'=>$myeditlist, 'link'=>4]);
+        return view("admin.category.edit", ['edit'=>$myedit, 'link'=>4]);
     }
 
     /**
@@ -109,7 +107,7 @@ class CategoryController extends Controller
 
         $data->save();
 
-        return redirect(route('admin_category_update'));
+        return redirect(route('admin_category'));
     }
 
     /**
@@ -120,9 +118,13 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category,$id)
     {
+
         $category=Category::find($id);
         $category->delete();
+
         return redirect(route('admin_category'));
+        
+
     }
     
 }

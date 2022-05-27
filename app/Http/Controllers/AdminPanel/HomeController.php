@@ -37,7 +37,7 @@ class HomeController extends Controller
 
     public function singin_getir()
     {
-        return view('admin.singin',['link'=>8]);
+        return redirect(route('admin'));
     }
 
     public function singup_getir()

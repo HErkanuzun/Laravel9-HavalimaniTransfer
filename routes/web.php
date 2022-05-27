@@ -4,7 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 
+use App\Http\Controllers\AdminPanel\UserController;
 use App\Http\Controllers\TransferController;
+use App\Http\Controllers\ImageController;
 use App\Http\Controllers\LocationController;
 use App\Http\Controllers\CategoryController;
 use Illuminate\Support\Facades\App;
@@ -26,11 +28,14 @@ Route::get('/hello', function () {
     return 'Hello World';
 });
 
+
+
 //2- Call view in Route
 Route::get('/welcome', function () {
 
 //4- Route->Controller->View
 Route::get('/test', [HomeController::class, 'test'])->name('test');
+
 
 //5- Route with post
 Route::post('/save',[HomeController::class,'save'])->name('save');
@@ -49,7 +54,9 @@ Route::get('/category',[AdminHomeController::class, 'category_getir'])->name("ca
 Route::get('/contacts', [HomeController::class, 'contacts'])->name('contacts_page');
 
 Route::get('/aboutus',[HomeController::class, 'aboutus'])->name("about_us_page");
+Route::get('/singlepage',[HomeController::class, 'single_page'])->name("single_page");
 
+Route::get('/konumhsp', [HomeController::class, 'home_konumhsp'])->name('home_konumhsp');
 
 
 Route::middleware('auth')->group(function (){
@@ -61,14 +68,13 @@ Route::get('/admin/billing',[AdminHomeController::class, 'billing_getir'])->name
 Route::get('/admin/profile',[AdminHomeController::class, 'profile_getir'])->name('admin_profile');
 Route::get('/admin/location',[AdminHomeController::class, 'location_getir'])->name('admin_add_location');
 //additional
-Route::get('/singin',[AdminHomeController::class, 'singin_getir'])->name('admin_singin');
-Route::get('/singup',[AdminHomeController::class, 'singup_getir'])->name('admin_singup');
-Route::get('/profile',[AdminHomeController::class, 'profile_getir'])->name('admin_profile');
+//Route::get('/singin',[AdminHomeController::class, 'singin_getir'])->name('admin_singin');
+//Route::get('/singup',[AdminHomeController::class, 'singup_getir'])->name('admin_singup');
 
 //**************************CATEGORY CONTROLLER ROUTE *************************/
-Route::get('/admin/category',[CategoryController::class, 'category_getir'] )->name('admin_category');
-Route::get('/admin/category/create',[CategoryController::class, 'category_create'] )->name('admin_category_create');
-Route::post('/admin/category/store',[CategoryController::class, 'category_store'] )->name('admin_category_store');
+Route::get('/admin/category',[CategoryController::class, 'admin_category_getir'] )->name('admin_category');
+Route::get('/admin/category/create',[CategoryController::class, 'admin_category_create'] )->name('admin_category_create');
+Route::post('/admin/category/store',[CategoryController::class, 'admin_category_store'] )->name('admin_category_store');
 Route::get('/admin/category/edit/{id}',[CategoryController::class, 'edit'] )->name('admin_category_edit');
 Route::post('/admin/category/update/{id}',[CategoryController::class, 'update'] )->name('admin_category_update');
 Route::get('/admin/category/show/{id}',[CategoryController::class, 'show'] )->name('admin_category_show');
@@ -95,6 +101,30 @@ Route::post('/admin/transfer/update/{id}',[TransferController::class, 'admin_tra
 Route::get('/admin/transfer/delete/{id}',[TransferController::class, 'admin_transfer_delete'] )->name('admin_transfer_delete');
 
 
+
+//**************************IMAGE CONTROLLER ROUTE ********************************/
+
+Route::get('/admin/image',[ImageController::class, 'admin_image'] )->name('admin_image');
+Route::get('/admin/image/create',[ImageController::class, 'admin_image_create'] )->name('admin_image_create');
+Route::post('/admin/image/store',[ImageController::class, 'admin_image_store'] )->name('admin_image_store');
+Route::get('/admin/image/show/{id}',[ImageController::class, 'admin_image_show'] )->name('admin_image_show');
+Route::get('/admin/image/edit/{id}',[ImageController::class, 'admin_image_edit'] )->name('admin_image_edit');
+Route::post('/admin/image/update/{id}',[ImageController::class, 'admin_image_update'] )->name('admin_image_update');
+Route::get('/admin/image/delete/{id}',[ImageController::class, 'admin_image_delete'] )->name('admin_image_delete');
+
+
+
+
+
+//*******************************User CONTROLLER ROUTE ******************************/
+
+Route::get('/admin/user',[UserController::class, 'admin_user'] )->name('admin_user');
+Route::get('/admin/user/create',[UserController::class, 'admin_user_create'] )->name('admin_user_create');
+Route::post('/admin/user/store',[UserController::class, 'admin_user_store'] )->name('admin_user_store');
+Route::get('/admin/user/show/{id}',[UserController::class, 'admin_user_show'] )->name('admin_user_show');
+Route::get('/admin/user/edit/{id}',[UserController::class, 'admin_user_edit'] )->name('admin_user_edit');
+Route::post('/admin/user/update/{id}',[UserController::class, 'admin_user_update'] )->name('admin_user_update');
+Route::get('/admin/user/delete/{id}',[UserController::class, 'admin_user_delete'] )->name('admin_user_delete');
 
 
 

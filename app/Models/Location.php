@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Location extends Model
 {
-    use HasFactory;
+    use HasFactory; 
+
+    # many to one
+    public function Rezervation()
+    {
+        return $this->belongsTo(Rezervation::class);
+    }
 }
