@@ -3,6 +3,7 @@
 @section('page','Profile')
 @section('content')
 
+
 <div class="main-content position-relative bg-gray-100 max-height-vh-100 h-100">
   <div class="container-fluid">
     <div class="page-header min-height-300 border-radius-xl mt-4" style="background-image: url('{{asset('assets/admin')}}/img/curved-images/curved0.jpg'); background-position-y: 50%;">
@@ -486,5 +487,4 @@
 <script src="{{asset('assets/admin')}}/js/core/bootstrap.min.js"></script>
 <script src="{{asset('assets/admin')}}/js/plugins/perfect-scrollbar.min.js"></script>
 <script src="{{asset('assets/admin')}}/js/plugins/smooth-scrollbar.min.js"></script>
-<script>
 @endsection

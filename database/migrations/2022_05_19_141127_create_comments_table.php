@@ -14,7 +14,7 @@ class CreateCommentsTable extends Migration
     public function up()
     {
         Schema::create('comments', function (Blueprint $table) {
-            $table->id();
+            $table->id()->autoIncrement();
             $table->string('comment');
             $table->string('rate')-> nullable()->default('5');
             $table->foreignId('transfer_id');
@@ -22,8 +22,6 @@ class CreateCommentsTable extends Migration
             $table->string('ip');
             $table->string('image')->nullable();
             $table->string('status',6);
-            $table->foreignId('created_at');
-            $table->foreignId('updated_at');
             $table->timestamps();
         });
     }

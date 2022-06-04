@@ -7,7 +7,7 @@
   @csrf
     <div class="container">
       <div class="row-2">
-        <select class="form-select" aria-label="Default select example" name="type">
+        <select class="form-select" name="type" aria-label="Default select example" >
           <option selected>Type</option>
           <option value="Airport">Airport</option>
           <option value="City">City</option>

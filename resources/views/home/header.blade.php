@@ -91,15 +91,15 @@
                         <div class="rd-navbar-nav-wrap">
                             <!-- RD Navbar Nav-->
                             <ul class="rd-navbar-nav">
-                                <li class="active"><a href="{{asset('assets')}}/index.html">Home</a>
+                                <li class="@if($linkhome==1) active @endif"><a  href="http://127.0.0.1:8000">Home</a>
                                 </li>
-                                <li><a href="{{asset('assets')}}/about-us.html">About Us</a>
+                                <li class="@if($linkhome==2) active @endif"><a  href="http://127.0.0.1:8000/aboutus">About Us</a>
                                 </li>
-                                <li><a href="{{asset('assets')}}/contacts.html">Contacts</a>
+                                <li class="@if($linkhome==3) active @endif"><a  href="http://127.0.0.1:8000/contacts">Contacts</a>
                                 </li>
-                                <li><a href="{{asset('assets')}}/typography.html">Typography</a>
+                                <li class="@if($linkhome==4) active @endif"><a  href="http://127.0.0.1:8000/tyropraphy">Typography</a>
                                 </li>
-                                <li><a href="http://127.0.0.1:8000/admin">Sing in</a>
+                                <li class="@if($linkhome==5) active @endif"><a  href="http://127.0.0.1:8000/admin">Sing in</a>
                             </ul>
                         </div>
                     </div>

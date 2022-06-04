@@ -3,6 +3,10 @@
 
 <head>
 
+    <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
 
     <!-- Font Awesome -->
 <link
@@ -19,6 +23,7 @@ rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css"
 rel="stylesheet"
 />
+
 
 <script
   type="text/javascript"
@@ -194,7 +199,7 @@ rel="stylesheet"
                             </g>
                         </svg>
                     </div>
-                    <span class="nav-link-text ms-1">Add tour</span>
+                    <span class="nav-link-text ms-1">Add Location</span>
 
 
                 </a>
@@ -219,7 +224,7 @@ rel="stylesheet"
                         <span class="nav-link-text ms-1">Transfer</span>
                     </a>
                 <li class="nav-item">
-                    <a class="nav-link @if($link==7) active @endif " href="http://127.0.0.1:8000/admin/image">
+                    <a class="nav-link @if($link==7) active @endif " href="{{route('admin_image_galery')}}">
                         <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                             <svg width="12px" height="12px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <title>settings</title>

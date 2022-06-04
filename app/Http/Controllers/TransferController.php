@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
+use Illuminate\Support\Facades\Storage;
 use App\Models\Transfer;
 use Illuminate\Http\Request;
 use phpDocumentor\Reflection\Types\Parent_;
@@ -42,12 +44,19 @@ class TransferController extends Controller
     {
         $data= new Transfer;
         $data->id= $request->id;
-        $data->type= $request->type;
-        $data->name= $request->name;
-
-        $data->lat=$request->lat;
-        $data->long=$request->long;
-        $data->status=$request->status;
+        $data->category_id= $request->category_id;
+        $data->title= $request->title;
+        if($request->file('image'))
+        {
+            $data->image=$request->file('image')->store('images');
+        }
+        $data->km_price=$request->km_price;
+        $data->detail=$request->detail;
+        $data->base_price=$request->base_price;
+        $data->capasity=$request->capasity;
+        $data->car_detail=$request->car_detail;
+        $data->keywords=$request->keywords;
+        $data->description=$request->description;
         
         $data->save();
         return redirect(route('admin_transfer'));

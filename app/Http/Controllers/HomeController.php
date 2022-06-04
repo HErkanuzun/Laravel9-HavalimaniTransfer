@@ -8,17 +8,20 @@ class HomeController extends Controller
 {
     public function index ()
     {
-        return view('home.index');
+        return view('home.index', ['linkhome'=>1]);
+    }
+
+    public function aboutus()
+    {
+        return view('home.aboutus', ['linkhome'=>2]);
     }
 
     public function contacts()
     {
-        return view('home.contact');
+        return view('home.contact', ['linkhome'=>3]);
     }
-    public function aboutus()
-    {
-        return view('home.aboutus');
-    }
+
+
     public function test()
     {
         return view('home.test');

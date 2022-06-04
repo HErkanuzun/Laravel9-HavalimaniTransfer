@@ -21,10 +21,11 @@ class CreateTransfersTable extends Migration
             $table->string('keywords');
             $table->string('description');
             $table->string('image')->nullable();
-            $table->string('base_price')->nullable();
-            $table->string('detail');
+            $table->string('base_price');
+            $table->string('detail')->nullable();
             $table->string('km_price');
             $table->string('capasity');
+            $table->string('car_detail');
             //-----------devami var yap
             $table->timestamps();
         });

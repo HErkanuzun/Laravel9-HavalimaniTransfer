@@ -1,6 +1,6 @@
 @extends('layouts.adminbase')
-@section('title',"Category")
-@section('page','Admin/category')
+@section('title',"Transfer")
+@section('page','Admin/Transfer')
 @section('content')
 
 
@@ -11,7 +11,7 @@
       <div class="col-12">
         <div class="card mb-4">
           <div class="card-header pb-0">
-            <h6>Category Table</h6>
+            <h6>Transfer Table</h6>
             <li class="nav-item d-flex align-items-center">
               <a class="btn btn-sm mb-0 me-3" href="http://127.0.0.1:8000/admin/transfer/create">Create Transfer</a>
           
@@ -41,10 +41,10 @@
                  
                   <tr>
                     <th scope="row">{{$item->id}}</th>
-                    <td>{{$item->title}}</td>
-                    <td>{{$item->keywords}}</td>
+                    <th scope="row">{{$item->title}}</th>
+                    <th scope="row">{{$item->keywords }}</th>
                     <td>{{$item->description}}</td>
-                    <td>{{$item->image}}</td>
+                    <td><a href="{{route("admin_image_index",['id'=>$item->id])}}" class="btn btn-primary">IMAGES</a></td>
                     <td>{{$item->category_id}}</td>
                     <td>{{$item->detail}}</td>
                     <td>{{$item->base_price}}</td>
@@ -52,9 +52,9 @@
                     <td>{{$item->capasity}}</td>
                     <td>
                       
-                      <a href="{{route('admin_category_edit',['id'=>$item->id])}}" class="btn btn-warning">Edit</a>
-                      <a href="{{route('admin_category_show',['id'=>$item->id])}}" class="btn btn-success">Show</a>
-                      <a href="{{route('admin_category_delete',['id'=>$item->id])}}" class="btn btn-danger">Delete</a>
+                      <a href="{{route('admin_transfer_edit',['id'=>$item->id])}}" class="btn btn-warning">Edit</a>
+                      <a href="{{route('admin_transfer_show',['id'=>$item->id])}}" class="btn btn-success">Show</a>
+                      <a href="{{route('admin_transfer_delete',['id'=>$item->id])}}" class="btn btn-danger">Delete</a>
                     </td>
                   </tr>
                   @endforeach

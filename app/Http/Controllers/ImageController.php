@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Storage;
 use App\Models\Image;
 use Illuminate\Http\Request;
 
@@ -12,12 +13,13 @@ class ImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function admin_image()
+    public function admin_image_index($id)
     {
-        $images=Image::all();
+        $images=Image::where('transfer_id',$id)->get();
         return view('admin.image.index', [
             'link'=>7,
-            'images'=>$images
+            'images'=>$images,
+            'id'=>$id
         ]);
     }
 
@@ -26,9 +28,9 @@ class ImageController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function admin_image_create()
+    public function admin_image_create($id)
     {
-        return view('admin.image.create', ['link'=>7]);
+        return view('admin.image.create', ['id'=>$id,'link'=>7]);
     }
 
     /**
@@ -39,17 +41,16 @@ class ImageController extends Controller
      */
     public function admin_image_store(Request $request, $id)
     {
-        $data= new Image;
-        $data->transfer_id = 0;
+        $data= new Image; 
+        $data->transfer_id = $id;
         $data->title= $request->title;
-        $data->image=$request->image;
         if($request->file('image'))
         {
             $data->image=$request->file('image')->store('images');
         }
 
         $data->save();
-        return redirect(route('admin_image'));
+        return redirect(route('admin_image_index',['id'=>$id]));
     }
 
     /**
@@ -77,6 +78,12 @@ class ImageController extends Controller
         return view("admin.Image.edit", ['edit'=>$myedit, 'myeditlist'=>$myeditlist, 'link'=>7]);
     }
 
+    public function admin_image_galery(Image $image)
+    {
+        $imageList=Image::all();
+        return view('admin.image.imagelist',['imageList'=>$imageList,'link'=>7]);
+    }
+
     /**
      * Update the specified resource in storage.
      *
@@ -86,7 +93,8 @@ class ImageController extends Controller
      */
     public function admin_image_update(Request $request, Image $image, $id)
     {
-        /**$data->transfer_id = 0;
+        $data= Image::find();
+        $data->transfer_id = 0;
         $data->title= $request->title;
         $data->image=$request->image;
         if($request->file('image'))
@@ -94,9 +102,8 @@ class ImageController extends Controller
             $data->image=$request->file('image')->store('images');
         }
 
-        $data1->save();
-        return redirect(route('admin_image'));
-    */
+        $data->save();
+        return redirect(route('admin_image_index'));
     }
 
 
@@ -110,6 +117,6 @@ class ImageController extends Controller
     {
         $image=Image::find($id);
         $image->delete();
-        return view(route('admin_image'));
+        return view(route('admin_image_index'));
     }
 }
