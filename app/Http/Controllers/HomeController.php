@@ -28,11 +28,11 @@ class HomeController extends Controller
     }
     public function home_konumhsp()
     {
-        return view('home.konumhsp');
+        return view('home.konumhsp', ['linkhome'=>1]);
     }
     public function single_page()
     {
-        return view('home.singlepage');
+        return view('home.singlepage', ['linkhome'=>1]);
     }
 
     public function param($id,$number)

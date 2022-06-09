@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 
+use App\Http\Controllers\BookingController;
 use App\Http\Controllers\AdminPanel\UserController;
 use App\Http\Controllers\TransferController;
 use App\Http\Controllers\ImageController;
@@ -46,6 +47,9 @@ Route::get('/welcome', function () {
 	})->name('dashboard');
 	return view('welcome');
 });
+//*************************** BOOKING CONTROLLER ROUTES ***************************//
+Route::get('/booking',[BookingController::class,'index'])->name('booking_getir');
+
 //*************************** HOME CONTROLLER ROUTES ***************************//
 Route::controller(HomeController::class)->group(function(){
 	Route::get('/', 'index' )->name('home');
@@ -58,8 +62,8 @@ Route::controller(HomeController::class)->group(function(){
 
 Route::middleware('auth')->group(function (){
 	//*************************** ADMİN PANEL ROUTES ***************************//
-	Route::get('/anasayfa',[AdminHomeController::class, 'getir'])->name("dash_cagir");
-	Route::get('/category',[AdminHomeController::class, 'category_getir'])->name("cate_getir");
+	Route::get('/anasayfa',[AdminHomeController::class, 'getir'])->name('dash_cagir');//.ali;miyor
+	Route::get('/category',[AdminHomeController::class, 'category_getir'])->name('cate_getir');
 	Route::get('/admin',[AdminHomeController::class, 'index'] )->name('admin');
 	Route::get('/admin/tables',[AdminHomeController::class, 'tables_getir'])->name('admin_tables');
 	Route::get('/admin/billing',[AdminHomeController::class, 'billing_getir'])->name('admin_billing');

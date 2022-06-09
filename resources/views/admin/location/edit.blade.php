@@ -8,7 +8,7 @@
     <div class="container">
       <div class="row-2">
         <select class="form-select" aria-label="Default select example" value="{{$edit->type}}" name="type">
-          <option selected>Type</option>
+          <option selected >{{$edit->type}}</option>
           <option value="Airport">Airport</option>
           <option value="City">City</option>
         </select>
@@ -43,7 +43,6 @@
               <option value="Paris, 2.349014">
               <option value="It, Rome, 12.51133">
           </div>
-  
           <div class="col-4">
             <label for="exampleDataList" class="form-label" >Status</label>
             <div class="form-check form-check-inline" >
@@ -54,9 +53,10 @@
               <input class="form-check-input" type="radio"  name="status" id="inlineRadio2" value="{{$edit->status}}">
               <label class="form-check-label" for="inlineRadio2">Available</label>
             </div>
-                <div class="col-1">
-                  <button type="submit" class="btn btn-default">Save</button>
-                </div>
+
+            <div class="col-1">
+              <button type="submit" class="btn btn-default">Save</button>
+            </div>
           </div>
       </div>
     </div>
