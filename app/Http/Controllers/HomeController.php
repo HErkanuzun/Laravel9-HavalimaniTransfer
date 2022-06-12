@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index ()
     {
-        return view('home.index', ['linkhome'=>1]);
+        $data=Category::all();
+        return view('home.index', ['linkhome'=>1,'data'=>$data]);
     }
 
     public function aboutus()
@@ -22,9 +24,9 @@ class HomeController extends Controller
     }
 
 
-    public function test()
+    public function home_test()
     {
-        return view('home.test');
+        return view('home.test', ['linkhome'=>1]);
     }
     public function home_konumhsp()
     {

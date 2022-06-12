@@ -13,13 +13,15 @@ class CategoryController extends Controller
 
     public static function getParentsTree($category, $title)
     {
+
         if($category->parent_id==0)
         {
             return $title;
         }
         $parent = Category::find($category->parent_id);
         $title = $parent->title . ' > ' . $title;
-        return CategoryController::getParentsTree($parent,$title);
+        return CategoryController::getParentsTree($parent, $title);
+
     }
     /**
      * Display a listing of the resource.
@@ -42,7 +44,8 @@ class CategoryController extends Controller
      */
     public function admin_category_create()
     {
-        return view("admin.category.create", ['link'=>4]);
+        $data=Category::all();
+        return view("admin.category.create", ['link'=>4,'data'=>$data]);
     }
 
     /**
@@ -77,7 +80,7 @@ class CategoryController extends Controller
      */
     public function show(Category $category,$id)
     {
-        $myshow=Category::find($id);
+        $data=Category::find($id);
         return view('admin.category.show',['link'=>4]);
     }
 

@@ -36,7 +36,7 @@ Route::get('/hello', function () {
 Route::get('/welcome', function () {
 	
 	//4- Route->Controller->View
-	Route::get('/test', [HomeController::class, 'test'])->name('test');
+	Route::get('/test', [HomeController::class, 'home_test'])->name('test');
 	
 	
 	//5- Route with post
@@ -57,7 +57,8 @@ Route::controller(HomeController::class)->group(function(){
 	Route::get('/aboutus', 'aboutus')->name("about_us_page");
 	Route::get('/singlepage', 'single_page')->name("single_page");
 	Route::get('/konumhsp',  'home_konumhsp')->name('home_konumhsp');
-	Route::get('/faq', 'index')->name('home_faq');		
+	Route::get('/faq', 'index')->name('home_faq');	
+	Route::get('/test', 'home_test')->name('test');	
 });
 
 Route::middleware('auth')->group(function (){

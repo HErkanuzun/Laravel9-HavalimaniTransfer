@@ -90,7 +90,8 @@
                     <div class="rd-navbar-aside-center">
                         <div class="rd-navbar-nav-wrap">
                             <!-- RD Navbar Nav-->
-                            <ul class="rd-navbar-nav">
+                           \\ <ul class="rd-navbar-nav">/
+                              </div>
                                 <li class="@if($linkhome==1) active @endif"><a  href="http://127.0.0.1:8000">Home</a>
                                 </li>
                                 <li class="@if($linkhome==2) active @endif"><a  href="http://127.0.0.1:8000/aboutus">About Us</a>

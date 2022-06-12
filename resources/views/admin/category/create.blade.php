@@ -6,16 +6,6 @@
 <form role="form" action="/admin/category/store" method="post">
     @csrf
     <div class="form-group">
-      <label> Parent Category</label>
-
-      <section class="form-control select2" name="parent_id" style="">
-        <option value="0" selected="selected"> Main Category</option>
-        @foreach ($data as $rs)
-           <option value="{{rs->id}}"> {{\App\Http\Controllers\CategoryController::getParentsTree($rs, $rs-title)}} </option>
-        @endforeach
-      </section>
-    </div>
-
     <div class="form-group">
       <label for="exampleInputTitle1">Title</label>
       <input type="Title" name="title" class="form-control" id="exampleInputTitle1" aria-describedby="emailHelp" placeholder="Title">
