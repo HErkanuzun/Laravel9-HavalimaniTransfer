@@ -62,8 +62,7 @@
                         <ul class="list-inline">
                             <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-phone"></span>
                                 <ul class="list-comma">
-                                    <li><a href="tel:#">1-800-1234-567</a></li>
-                                    <li><a href="tel:#">1-800-6780-345</a></li>
+                                    <li><a href="tel:#">+90-534-775-66-97</a></li>
                                 </ul>
                             </li>
                             <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-map-marker"></span><a href="#">2130 Fulton Street, San Diego, CA 94117-1080 USA</a></li>
