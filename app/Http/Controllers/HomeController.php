@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Transfer;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -9,8 +10,11 @@ class HomeController extends Controller
 {
     public function index ()
     {
+        $sliderdata=Transfer::limit(3)->get();
         $data=Category::all();
-        return view('home.index', ['linkhome'=>1,'data'=>$data]);
+        return view('home.index', ['linkhome'=>1,'data'=>$data,
+            'sliderdata'=>$sliderdata
+    ]);
     }
 
     public function aboutus()
