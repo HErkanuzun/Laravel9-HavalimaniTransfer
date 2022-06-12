@@ -4,16 +4,19 @@ namespace App\Http\Controllers;
 
 use App\Models\Transfer;
 use App\Models\Category;
+use App\Models\image;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index ()
     {
-        $sliderdata=Transfer::limit(3)->get();
+        $sliderdata=image::limit(3)->get();
+        $transferdata=Transfer::limit(6)->get();
         $data=Category::all();
         return view('home.index', ['linkhome'=>1,'data'=>$data,
-            'sliderdata'=>$sliderdata
+            'sliderdata'=>$sliderdata,
+            'transferdata'=>$transferdata,
     ]);
     }
 

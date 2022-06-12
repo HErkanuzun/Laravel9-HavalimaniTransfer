@@ -39,12 +39,6 @@
     <label for="exampleFormControlTextarea1"  class="form-label">Detail</label>
     <textarea class="summernote form-control" name="detail" class="form-control" id="exampleFormControlTextarea11" rows="3"></textarea>
   </div>
-  
-  <div class="form-group">
-    <label for="exampleInputPassword1">km_price</label>
-    <input type="text" name="km_price" class="form-control" id="3exampleInputPricePerKilometre1" placeholder="Price Per Kilometre">
-  </div>
-  
   <div>
     <label for="exampleInputPassword1">Types Of Vehicles </label>
     <select class="form-select" name="car_detail" aria-label="Default select example">
