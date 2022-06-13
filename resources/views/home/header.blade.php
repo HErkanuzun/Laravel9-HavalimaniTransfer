@@ -95,15 +95,34 @@
                                 
                             <ul class="rd-navbar-nav">
                                 <ul class="rd-navbar-nav">
-                                    <li class="@if($linkhome==1) active @endif"><a  href="http://127.0.0.1:8000">Home</a>
+                                    @foreach ($categorydata as $rs)
+                                        
+                                    
+                                    <li class="@if($linkhome==1) active @endif"><a  href="http://127.0.0.1:8000/{{$rs->keywords}}">{{$rs->title}}</a>
                                     </li>
-                                    <li class="@if($linkhome==2) active @endif"><a  href="http://127.0.0.1:8000/aboutus">About Us</a>
-                                    </li>
-                                    <li class="@if($linkhome==3) active @endif"><a  href="http://127.0.0.1:8000/contacts">Contacts</a>
-                                    </li>
-                                    <li class="@if($linkhome==4) active @endif"><a  href="http://127.0.0.1:8000/search">Search</a>
-                                    </li>
-                                    <li class="@if($linkhome==5) active @endif"><a  href="http://127.0.0.1:8000/admin">Sing in</a>
+
+                                    
+                                    @endforeach
+                                    <li class="nav-item dropdown bg-warning">
+                                        @auth
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         <h3> {{ Auth::user()->name }}</h3>
+                                        </a>
+                                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/admin">Dashboard</a>
+                                            <a class="dropdown-item" href="/user/profile">Profile</a>
+                                            <form action="/logout" method="post">@csrf<button class="dropdown-item" type="submit">Log out</button></form>
+                                        </div>
+                                        @else
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                           <h3> USER ISLEMLERI</h3>
+                                          </a>
+                                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                            <a class="dropdown-item" href="/register">Sign up</a>
+                                            <a class="dropdown-item" href="/login">Log in</a>
+                                          </div>
+                                        @endauth
+                                      </li>
                                 </ul>
                             </ul>
                             

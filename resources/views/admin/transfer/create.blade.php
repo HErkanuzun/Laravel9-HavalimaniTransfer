@@ -78,7 +78,7 @@
   
   <div>
     <label for="formFileLg" class="form-label">Image</label>
-    <input class="form-control form-control" name="image" id="formFileLg2" type="file">
+    <input class="form-control form-control" name="image" id="image" type="file">
     
   </div>
   

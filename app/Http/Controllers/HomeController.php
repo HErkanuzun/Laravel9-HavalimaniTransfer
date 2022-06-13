@@ -21,37 +21,50 @@ class HomeController extends Controller
     {
         $sliderdata=image::limit(3)->get();
         $transferdata=Transfer::limit(6)->get();
-        $categorydata=Category::limit(5)->get();
+        $categorydata=Category::limit(7)->get();
         $locationdata=Location::limit(5)->get();
+        $imagedata=image::limit(10)->get();
 
         $data=Category::all();
-        return view('home.index', ['linkhome'=>1,'data'=>$data,
+        return view('home.index', ['linkhome'=>1,
+            'data'=>$data,
             'sliderdata'=>$sliderdata,
             'transferdata'=>$transferdata,
             'categorydata'=>$categorydata,
             'locationdata'=>$locationdata,
+            'imagedata'=>$imagedata,
+
     ]);
     }
 
     public function aboutus()
     {
-        return view('home.aboutus', ['linkhome'=>2]);
+        $sliderdata=image::limit(3)->get();
+        $transferdata=Transfer::limit(6)->get();
+        $categorydata=Category::limit(5)->get();
+        $locationdata=Location::limit(5)->get();
+        $imagedata=image::limit(10)->get();
+        
+
+        $data=Category::all();
+        return view('home.aboutus', ['linkhome'=>2,
+            'sliderdata'=>$sliderdata,
+            'transferdata'=>$transferdata,
+            'categorydata'=>$categorydata,
+            'locationdata'=>$locationdata,
+            'imagedata'=>$imagedata,
+    
+    
+    ]);
     }
 
-    public function home_contact(){
-        $data = Setting::first()->contact;
-        return view('home.contact',[
-            'data'=>$data,
-            'linkhome'=>3
-        ,
-        ]);
-    }
+
     public function home_references(){
-
+        $categorydata=Category::limit(5)->get();
         $data = Setting::first()->references;
         return view('home.reference',[
             'data'=>$data,
-            'linkhome'=>5
+            'linkhome'=>5,
         ]);
     }
 
@@ -60,15 +73,34 @@ class HomeController extends Controller
         return view('home.test', ['linkhome'=>1]);
     }
     public function home_konumhsp()
-    {
-        return view('home.konumhsp', ['linkhome'=>1]);
+    {   
+        $categorydata=Category::limit(5)->get();
+        return view('home.konumhsp', ['linkhome'=>1,
+    
+    ]);
+    
     }
     public function single_page()
     {
-        return view('home.singlepage', ['linkhome'=>1]);
+        $categorydata=Category::limit(5)->get();
+        return view('home.singlepage', ['linkhome'=>1,
+    ]);
     }
+
+    public function home_contact(){
+        $categorydata=Category::limit(5)->get();
+        $data = Setting::first()->contact;
+        return view('home.contact',[
+            'data'=>$data,
+            'linkhome'=>3,
+        
+        ]);
+    }
+
+
     public function home_search()
     {
+        
         $sliderdata=image::limit(3)->get();
         $transferdata=Transfer::limit(6)->get();
         $categorydata=Category::limit(5)->get();
