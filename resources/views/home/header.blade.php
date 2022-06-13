@@ -1,8 +1,12 @@
 <!-- Page preloader-->
 <div class="page-loader">
     <div class="page-loader-body">
+        @php
+            $parentCategories = 0
+        @endphp
         <div class="preloader-wrapper big active">
             <div class="spinner-layer spinner-blue">
+
                 <div class="circle-clipper left">
                     <div class="circle"> </div>
                 </div>
@@ -84,7 +88,7 @@
                         <!-- RD Navbar Toggle-->
                         <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                         <!-- RD Navbar Brand-->
-                        <div class="rd-navbar-brand"><a class="brand-name" href="{{asset('assets')}}/index.html"><img class="logo-default" src="{{asset('assets')}}/images/FlyHgs-logos_black.png" alt="" width="208" height="46"/><img class="logo-inverse" src="{{asset('assets')}}/images/logo-inverse-208x46.png" alt="" width="208" height="46"/></a></div>
+                        <div class="rd-navbar-brand"><a class="brand-name" href="http://127.0.0.1:8000"><img class="logo-default" src="{{asset('assets')}}/images/FlyHgs-logos_black.png" alt="" width="208" height="46"/><img class="logo-inverse" src="{{asset('assets')}}/images/logo-inverse-208x46.png" alt="" width="208" height="46"/></a></div>
                     </div>
                     <div class="rd-navbar-aside-center">
                         <div class="rd-navbar-nav-wrap">
@@ -93,20 +97,22 @@
                                 
                                 
                             <ul class="rd-navbar-nav">
-                                <li class="@if($linkhome==1) active @endif"><a  href="http://127.0.0.1:8000">aboutus</a>
-                                </li>
-                                <li class="@if($linkhome==2) active @endif"><a  href="http://127.0.0.1:8000/aboutus">About Us</a>
-                                </li>
-                                <li class="@if($linkhome==3) active @endif"><a  href="http://127.0.0.1:8000/contacts">Contacts</a>
-                                </li>
-                                <li class="@if($linkhome==4) active @endif"><a  href="http://127.0.0.1:8000/tyropraphy">Typography</a>
-                                </li>
-                                <li class="@if($linkhome==5) active @endif"><a  href="http://127.0.0.1:8000/admin">Sing in</a>
+                                <ul class="rd-navbar-nav">
+                                    <li class="@if($linkhome==1) active @endif"><a  href="http://127.0.0.1:8000">aboutus</a>
+                                    </li>
+                                    <li class="@if($linkhome==2) active @endif"><a  href="http://127.0.0.1:8000/aboutus">About Us</a>
+                                    </li>
+                                    <li class="@if($linkhome==3) active @endif"><a  href="http://127.0.0.1:8000/contacts">Contacts</a>
+                                    </li>
+                                    <li class="@if($linkhome==4) active @endif"><a  href="http://127.0.0.1:8000/tyropraphy">Typography</a>
+                                    </li>
+                                    <li class="@if($linkhome==5) active @endif"><a  href="http://127.0.0.1:8000/admin">Sing in</a>
+                                </ul>
                             </ul>
                             
                         </div>
                     </div>
-                    <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" href="#">Book a tour now</a></div>
+                    <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" active href="http://127.0.0.1:8000/admin" href="#">Sing Up</a></div>
                 </div>
             </nav>
         </div>

@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+
+    public static function maincategorylist()
+    {
+        return Category::where('parent_id','=', 0)->with('children')->get();
+    }
+
     public function index ()
     {
         $sliderdata=image::limit(3)->get();
@@ -45,6 +51,19 @@ class HomeController extends Controller
     public function single_page()
     {
         return view('home.singlepage', ['linkhome'=>1]);
+    }
+    public function home_search()
+    {
+        $sliderdata=image::limit(3)->get();
+        $transferdata=Transfer::limit(6)->get();
+        $categorydata=Category::limit(5)->get();
+
+        $data=Category::all();
+        return view('home.search', ['linkhome'=>1,'data'=>$data,
+            'sliderdata'=>$sliderdata,
+            'transferdata'=>$transferdata,
+            'categorydata'=>$categorydata,
+    ]);
     }
 
     public function param($id,$number)

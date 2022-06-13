@@ -58,7 +58,9 @@ Route::controller(HomeController::class)->group(function(){
 	Route::get('/singlepage', 'single_page')->name("single_page");
 	Route::get('/konumhsp',  'home_konumhsp')->name('home_konumhsp');
 	Route::get('/faq', 'index')->name('home_faq');	
+	Route::get('/search', 'home_search')->name('search');	
 	Route::get('/test', 'home_test')->name('test');	
+
 });
 
 Route::middleware('auth')->group(function (){
