@@ -26,7 +26,7 @@
                         </div>
                         
                         <div class="event-default-inner">
-                            <h5><a class="event-default-title" href="#">France, Paris</a></h5><span class="heading-5">({{$rs->price)</span>
+                            <h5><a class="event-default-title" href="#">France, Paris</a></h5><span class="heading-5">{{$rs->base_price}}</span>
                         </div>
                     </article>
                 </div>

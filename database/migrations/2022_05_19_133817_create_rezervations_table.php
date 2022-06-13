@@ -14,7 +14,7 @@ class CreateRezervationsTable extends Migration
     public function up()
     {
         Schema::create('rezervations', function (Blueprint $table) {
-            $table->id();
+            $table->id()->autoIncrement();
             $table->foreignId('user_id');
             $table->foreignId('transfer_id');
             $table->foreignId('from_location_id');

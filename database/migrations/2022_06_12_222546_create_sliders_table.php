@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateLocationsTable extends Migration
+class CreateSlidersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,10 @@ class CreateLocationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('locations', function (Blueprint $table) {
+        Schema::create('sliders', function (Blueprint $table) {
             $table->id()->autoIncrement();
-            $table->string('type');
             $table->string('name');
-            $table->string('lat');
-            $table->string('long');
-            $table->string('status',15);
+            $table->string('image');
             $table->timestamps();
         });
     }
@@ -31,6 +28,6 @@ class CreateLocationsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('locations');
+        Schema::dropIfExists('sliders');
     }
 }

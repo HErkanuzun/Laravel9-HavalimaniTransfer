@@ -15,7 +15,7 @@ class CreateTransfersTable extends Migration
     public function up()
     {
         Schema::create('transfers', function (Blueprint $table) {
-            $table->id();
+            $table->id()->autoIncrement();
             $table->foreignId('category_id');
             $table->string('title');
             $table->string('keywords');

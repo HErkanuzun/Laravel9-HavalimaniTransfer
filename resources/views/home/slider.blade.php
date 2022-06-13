@@ -17,36 +17,7 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="swiper-slide" data-slide-bg="{{Storage::url($rs->image)}}" alt="">
-                    <div class="swiper-slide-caption">
-                        <div class="container container-bigger swiper-main-section">
-                            <div class="row row-fix justify-content-sm-center justify-content-md-start">
-                                <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
-                                    <h3>{{$rs->title}}</h3>
-                                    <div class="divider divider-decorate"></div>
-                                    <p class="text-spacing-sm">Our travel agency is ready to offer you an exciting vacation that is designed to fit your own needs and wishes. Whether it’s an exotic cruise or a trip to your favorite resort, you will surely have the best experience.</p><a class="button button-default-outline button-nina button-sm" href="#">learn more</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
- 
- 
-                <div class="swiper-slide" data-slide-bg="{{Storage::url($rs->image)}}">
-                    <div class="swiper-slide-caption">
-                        <div class="container container-bigger swiper-main-section">
-                            <div class="row row-fix justify-content-sm-center justify-content-md-start">
-                                <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
-                                    <h3>{{$rs->title}}</h3>
-                                    <div class="divider divider-decorate"></div>
-                                    <p class="text-spacing-sm">Our team is ready to provide you with unique weekly travel insights that include photos, videos, and articles about untravelled tourist paths. We know everything about the places you’ve never been to!</p><a class="button button-default-outline button-nina button-sm" href="#">learn more</a>
-                                </div>
                 @endforeach
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
             <!-- Swiper controls-->
             <div class="swiper-pagination-wrap">

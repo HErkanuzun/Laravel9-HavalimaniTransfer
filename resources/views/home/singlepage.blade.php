@@ -2,209 +2,109 @@
 @section('title','single PAGE')
 @include("home.header")
 @section('content')
-<!-- Ronald Chen-->
-<section class="section section-lg bg-default text-left">
+<!-- about this project-->
+<section class="section section-lg text-center text-md-left bg-default">
   <div class="container container-bigger">
-    <div class="row row-fix row-50 justify-content-xl-between">
-      <div class="col-xl-4">
-        <div class="row row-fix row-70 align-items-md-center">
-          <div class="col-md-6 col-xl-12"><img src="images/ronald-chen-1-420x420.jpg" alt="" width="420" height="420"/>
-          </div>
-          <div class="col-md-6 col-xl-12 text-md-left">
-            <h6>Get in Touch</h6>
-            <!-- RD Mailform-->
-            <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php">
-              <div class="row row-20 row-fix">
-                <div class="col-md-12">
-                  <div class="form-wrap form-wrap-validation">
-                    <label class="form-label-outside" for="form-1-name">First name</label>
-                    <input class="form-input" id="form-1-name" type="text" name="name" data-constraints="@Required">
-                  </div>
-                </div>
-                <div class="col-md-12">
-                  <div class="form-wrap form-wrap-validation">
-                    <label class="form-label-outside" for="form-1-email">E-mail</label>
-                    <input class="form-input" id="form-1-email" type="email" name="email" data-constraints="@Email @Required">
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <div class="form-wrap form-wrap-validation">
-                    <label class="form-label-outside" for="form-1-message">Message</label>
-                    <textarea class="form-input" id="form-1-message" name="message" data-constraints="@Required"></textarea>
-                  </div>
-                </div>
-                <div class="col-sm-12 offset-custom-1">
-                  <div class="form-button">
-                    <button class="button button-secondary button-nina" type="submit">send message</button>
-                  </div>
-                </div>
-              </div>
-            </form>
-          </div>
+    <div class="row row-50 justify-content-md-center justify-content-xl-between">
+      <div class="col-md-8 col-xxl-7">
+        <h3>about this Tour</h3>
+        <div class="divider divider-decorate"></div>
+        <div class="box-2-columns">
+          <p class="heading-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="text-spacing-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non </p>
+          <p class="text-spacing-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
         </div>
       </div>
-      <div class="col-xl-7">
-        <div class="row row-fix row-30 row-xl-120">
-          <div class="col-sm-12">
-            <div class="heading-5">Tour Agent</div>
-            <h3>ronald chen</h3>
-            <div class="divider divider-decorate"></div>
-            <p class="text-spacing-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation </p>
-            <div class="row text-center row-lg row-30 row-xxs-center">
-              <div class="cell-xxs-6 col-sm-4">
-                <div class="progress-bar-circle" data-value="0.75" data-gradient="#ffa900, #ffa900" data-empty-fill="rgb(242,243,249)" data-size="140" data-thickness="6"><span class="radial">5</span></div>
-                <div class="heading-5">Hotel Booking</div>
+      <div class="col-md-4">
+        <ul class="list-lg">
+          <li>
+            <p><b class="text-gray-darker">Tour Operator</b></p>
+            <p><a class="link-text-color" href="#">Sealine</a></p>
+          </li>
+          <li>
+            <p><b class="text-gray-darker">Location</b></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,</p>
+          </li>
+          <li>
+            <p><b class="text-gray-darker">General Information</b></p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ux research-->
+<section class="section section-lg text-center text-md-left bg-gray-lighter novi-background bg-cover">
+  <div class="container container-bigger">
+    <div class="row row-50 justify-content-md-center justify-content-xl-between">
+      <div class="col-md-5 col-xxl-4">
+        <h3>Excursions</h3>
+        <div class="divider divider-decorate"></div>
+        <p class="heading-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+        <p class="text-spacing-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo </p>
+      </div>
+      <div class="col-md-7"><img src="images/single-project-1-870x580.jpg" alt="" width="870" height="580"/>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ui design-->
+<section class="section section-lg text-center text-md-left bg-gray-lighter novi-background bg-cover">
+  <div class="container container-bigger">
+    <div class="row row-50 justify-content-md-center justify-content-xl-between flex-md-row-reverse">
+      <div class="col-md-6 col-xxl-5">
+        <h3>Benefits</h3>
+        <div class="divider divider-decorate"></div>
+        <p class="heading-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</p>
+        <p class="text-spacing-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure </p>
+      </div>
+      <div class="col-md-6">
+        <figure class="image-position-01"><img src="images/about-01-709x667.png" alt="" width="709" height="667"/>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- development-->
+<section class="section section-lg text-center text-md-left bg-gray-lighter novi-background bg-cover">
+  <div class="container container-bigger">
+    <div class="row row-50 justify-content-md-center justify-content-xl-between">
+      <div class="col-md-5 col-xxl-4">
+        <h3>Additional services</h3>
+        <div class="divider divider-decorate"></div>
+        <p class="heading-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+        <p class="text-spacing-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure </p>
+      </div>
+      <div class="col-md-7">
+        <!-- Swiper-->
+        <div class="swiper-container swiper-slider swiper-slider_height-1" data-loop="true" data-autoplay="5500" data-simulate-touch="false">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" data-slide-bg="images/single-project-2-870x580.jpg">
+              <div class="swiper-slide-caption">
+                <div class="section-md"></div>
               </div>
-              <div class="cell-xxs-6 col-sm-4">
-                <div class="progress-bar-circle" data-value="0.50" data-gradient="#ffa900, #ffa900" data-empty-fill="rgb(242,243,249)" data-size="140" data-thickness="6"><span class="radial">5</span></div>
-                <div class="heading-5">Management</div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="images/single-project-3-870x580.jpg">
+              <div class="swiper-slide-caption">
+                <div class="section-md"></div>
               </div>
-              <div class="cell-xxs-6 col-sm-4">
-                <div class="progress-bar-circle" data-value="0.25" data-gradient="#ffa900, #ffa900" data-empty-fill="rgb(242,243,249)" data-size="140" data-thickness="6"><span class="radial">5</span></div>
-                <div class="heading-5">Communication</div>
+            </div>
+            <div class="swiper-slide" data-slide-bg="images/single-project-4-870x580.jpg">
+              <div class="swiper-slide-caption">
+                <div class="section-md"></div>
               </div>
             </div>
           </div>
-          <div class="col-sm-12">
-            <div class="row row-70">
-              <div class="col-md-6">
-                <h6>skills</h6>
-                <p>Financial and budget management, planning, <br class="d-none d-xxl-block"> tour organization, communication
-                </p>
-              </div>
-              <div class="col-md-6">
-                <h6>awards</h6>
-                <ul class="list list-xxs text-spacing-sm">
-                  <li>2017 — The Best Tour Manager</li>
-                  <li>2016 — Employee of the Year</li>
-                  <li>2015 — Leading Tourism Expert</li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <h6>certificates</h6>
-                <ul class="list list-xxs text-spacing-sm">
-                  <li>2017 — International Tourism Management</li>
-                  <li>2016 — Hotel Management</li>
-                  <li>2015 — Applied Tourism Certificate</li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <h6>contact information</h6>
-                <ul class="list-xs">
-                  <li class="box-inline box-inline-gray"><span class="icon novi-icon icon-md-smaller icon-primary mdi mdi-map-marker"></span>
-                    <div><a href="#">2130 Fulton Street, San Diego, CA<br>94117-1080 USA</a></div>
-                  </li>
-                  <li class="box-inline box-inline-gray"><span class="icon novi-icon icon-md-smaller icon-primary mdi mdi-phone"></span>
-                    <ul class="list-comma">
-                      <li><a href="tel:#">1-800-1234-567</a></li>
-                    </ul>
-                  </li>
-                  <li>
-                    <ul class="inline-list-xs">
-                      <li><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-facebook" href="#"></a></li>
-                      <li><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-twitter" href="#"></a></li>
-                      <li><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-instagram" href="#"></a></li>
-                      <li><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-google" href="#"></a></li>
-                      <li><a class="icon novi-icon icon-sm-bigger icon-gray-1 mdi mdi-linkedin" href="#"></a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+          <!-- Swiper controls-->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- Projects-->
-<section class="section section-lg text-center bg-gray-lighter novi-background bg-cover">
-  <div class="container container-wide">
-    <div class="row row-fix row-50 justify-content-md-center">
-      <div class="col-sm-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-        <h3>Hot Deals</h3>
-        <div class="divider divider-decorate"></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-      </div>
-    </div>
-    <div class="row row-50">
-      <div class="col-md-6 col-xl-4">
-        <article class="event-default-wrap">
-          <div class="event-default">
-            <figure class="event-default-image"><img src="images/landing-private-airlines-01-570x370.jpg" alt="" width="570" height="370"/>
-            </figure>
-            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
-          </div>
-          <div class="event-default-inner">
-            <h5><a class="event-default-title" href="single-tour.html">France, Paris</a></h5><span class="heading-5">from $280</span>
-          </div>
-        </article>
-      </div>
-      <div class="col-md-6 col-xl-4">
-        <article class="event-default-wrap">
-          <div class="event-default">
-            <figure class="event-default-image"><img src="images/landing-private-airlines-02-570x370.jpg" alt="" width="570" height="370"/>
-            </figure>
-            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
-          </div>
-          <div class="event-default-inner">
-            <h5><a class="event-default-title" href="single-tour.html">USA, Boston</a></h5><span class="heading-5">from $480</span>
-          </div>
-        </article>
-      </div>
-      <div class="col-md-6 col-xl-4">
-        <article class="event-default-wrap">
-          <div class="event-default">
-            <figure class="event-default-image"><img src="images/landing-private-airlines-03-570x370.jpg" alt="" width="570" height="370"/>
-            </figure>
-            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
-          </div>
-          <div class="event-default-inner">
-            <h5><a class="event-default-title" href="single-tour.html">Italy, Venice</a></h5><span class="heading-5">from $350</span>
-          </div>
-        </article>
-      </div>
-      <div class="col-md-6 col-xl-4">
-        <article class="event-default-wrap">
-          <div class="event-default">
-            <figure class="event-default-image"><img src="images/landing-private-airlines-04-570x370.jpg" alt="" width="570" height="370"/>
-            </figure>
-            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
-          </div>
-          <div class="event-default-inner">
-            <h5><a class="event-default-title" href="single-tour.html">Spain, Benidorm</a></h5><span class="heading-5">from $350</span>
-          </div>
-        </article>
-      </div>
-      <div class="col-md-6 col-xl-4">
-        <article class="event-default-wrap">
-          <div class="event-default">
-            <figure class="event-default-image"><img src="images/landing-private-airlines-05-570x370.jpg" alt="" width="570" height="370"/>
-            </figure>
-            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
-          </div>
-          <div class="event-default-inner">
-            <h5><a class="event-default-title" href="single-tour.html">Egypt,  Sharm El Sheikh</a></h5><span class="heading-5">from $520</span>
-          </div>
-        </article>
-      </div>
-      <div class="col-md-6 col-xl-4">
-        <article class="event-default-wrap">
-          <div class="event-default">
-            <figure class="event-default-image"><img src="images/landing-private-airlines-06-570x370.jpg" alt="" width="570" height="370"/>
-            </figure>
-            <div class="event-default-caption"><a class="button button-xs button-secondary button-nina" href="#">learn more</a></div>
-          </div>
-          <div class="event-default-inner">
-            <h5><a class="event-default-title" href="single-tour.html">UK, London</a></h5><span class="heading-5">from $600</span>
-          </div>
-        </article>
-      </div>
-    </div>
-  </div><a class="button button-secondary button-nina" href="#">view all projects</a>
-</section>
-
-<!-- Testimonials-->
 <section class="section section-lg text-center bg-default novi-background bg-cover">
   <div class="container container-wide">
     <div class="row row-fix row-50 justify-content-md-center">
@@ -245,24 +145,15 @@
     </div>
   </div>
 </section>
-
-<!-- CTA Gradient-->
-<section class="section section-md text-center text-md-left bg-gray-700 novi-background bg-cover">
+<section class="section section-xs text-center bg-gray-700 novi-background bg-cover">
   <div class="container container-wide">
-    <div class="row row-fix row-50 justify-content-sm-center">
-      <div class="col-xxl-8">
-        <div class="box-cta box-cta-inline">
-          <div class="box-cta-inner">
-            <h3 class="box-cta-title">looking for a great tour?</h3>
-            <p>Our travel agency can provide with a wide variety of tours to fit your taste.</p>
-          </div>
-          <div class="box-cta-inner"><a class="button button-secondary button-nina" href="about-us.html">learn more</a></div>
-        </div>
-      </div>
+    <div class="box-cta-thin">
+      <p class="big"><span class="label-cta label-cta-primary">Hot!</span><strong>Sealine   </strong><span>&nbsp;is your #1 travel agency offering all kinds of tours and excursions.&nbsp;</span><a class="link-bold" href="contacts.html">Contact us now!  </a></p>
     </div>
   </div>
 </section>
 
+<!-- Page Footer-->
 <!-- Footer Extended-->
 <footer class="section novi-background bg-cover page-footer page-footer-extended text-center text-lg-left bg-gray-darker">
   <div class="rd-google-map-wrap">
@@ -441,5 +332,6 @@
 <script src="js/core.min.js"></script>
 <script src="js/script.js"></script>
 <!-- Google Tag Manager --><noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-P9FT69" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-P9FT69');</script><!-- End Google Tag Manager --></body>
+
 
 @endsection

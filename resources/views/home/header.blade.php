@@ -89,8 +89,11 @@
                     <div class="rd-navbar-aside-center">
                         <div class="rd-navbar-nav-wrap">
                             <!-- RD Navbar Nav-->
+
+                                
+                                
                             <ul class="rd-navbar-nav">
-                                <li class="@if($linkhome==1) active @endif"><a  href="http://127.0.0.1:8000">Home</a>
+                                <li class="@if($linkhome==1) active @endif"><a  href="http://127.0.0.1:8000">aboutus</a>
                                 </li>
                                 <li class="@if($linkhome==2) active @endif"><a  href="http://127.0.0.1:8000/aboutus">About Us</a>
                                 </li>
@@ -100,6 +103,7 @@
                                 </li>
                                 <li class="@if($linkhome==5) active @endif"><a  href="http://127.0.0.1:8000/admin">Sing in</a>
                             </ul>
+                            
                         </div>
                     </div>
                     <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" href="#">Book a tour now</a></div>

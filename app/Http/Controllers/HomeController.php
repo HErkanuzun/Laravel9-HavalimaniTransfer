@@ -13,10 +13,13 @@ class HomeController extends Controller
     {
         $sliderdata=image::limit(3)->get();
         $transferdata=Transfer::limit(6)->get();
+        $categorydata=Category::limit(5)->get();
+
         $data=Category::all();
         return view('home.index', ['linkhome'=>1,'data'=>$data,
             'sliderdata'=>$sliderdata,
             'transferdata'=>$transferdata,
+            'categorydata'=>$categorydata,
     ]);
     }
 
@@ -54,17 +57,6 @@ class HomeController extends Controller
                 'id' =>$id,
                 'number' =>$number
             ]);
-    }
-    public function save()
-    {
-        echo "Save Function<br>";
-        echo "<br>First Name:", $_REQUEST["fname"];
-        echo "<br>Last Name:", $_REQUEST["lname"];
-        //return view('home.test',
-        [
-            'fname' =>$_REQUEST["fname"],
-            'lname' =>$_REQUEST["lname"]
-        ];
     }
 
 }

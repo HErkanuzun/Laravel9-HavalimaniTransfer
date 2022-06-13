@@ -118,6 +118,17 @@ Route::middleware('auth')->group(function (){
 	    Route::get('/image-galery','admin_image_galery')->name('_galery');
 	});
 
+	Route::prefix('admin/slider')->name('admin_slider')->controller(ImageController::class)->group(function (){
+
+		Route::get('/index', 'admin_slider_index' )->name('_index');
+		Route::get('/create', 'admin_slider_create' )->name('_create');
+		Route::post('/store', 'admin_slider_store' )->name('_store');
+		Route::get('/show/{id}', 'admin_slider_show' )->name('_show');
+		Route::get('/edit/{id}', 'admin_slider_edit' )->name('_edit');
+		Route::post('/update/{id}', 'admin_slider_update' )->name('_update');
+		Route::get('/delete/{id}', 'admin_slider_delete' )->name('_delete');
+	});
+
 	
 	//*******************************USER CONTROLLER ROUTE ******************************/
 	

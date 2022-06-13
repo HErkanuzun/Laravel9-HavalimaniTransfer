@@ -14,7 +14,7 @@ class CreateFlightsTable extends Migration
     public function up()
     {
         Schema::create('flights', function (Blueprint $table) {
-            $table->id();
+            $table->id()->autoIncrement();
 
             $table->string('title');
             $table->string('description')->nullable();

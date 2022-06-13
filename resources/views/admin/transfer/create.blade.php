@@ -77,7 +77,7 @@
   </div>
   
   <div>
-    <label for="formFileLg" class="form-label">Large file input example</label>
+    <label for="formFileLg" class="form-label">Image</label>
     <input class="form-control form-control" name="image" id="formFileLg2" type="file">
     
   </div>
