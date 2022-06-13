@@ -1,10 +1,6 @@
 <!-- Page preloader-->
 <div class="page-loader">
     <div class="page-loader-body">
-        @php
-            $parentCategories = 0
-            //9
-        @endphp
         <div class="preloader-wrapper big active">
             <div class="spinner-layer spinner-blue">
 
@@ -99,13 +95,13 @@
                                 
                             <ul class="rd-navbar-nav">
                                 <ul class="rd-navbar-nav">
-                                    <li class="@if($linkhome==1) active @endif"><a  href="http://127.0.0.1:8000">aboutus</a>
+                                    <li class="@if($linkhome==1) active @endif"><a  href="http://127.0.0.1:8000">Home</a>
                                     </li>
                                     <li class="@if($linkhome==2) active @endif"><a  href="http://127.0.0.1:8000/aboutus">About Us</a>
                                     </li>
                                     <li class="@if($linkhome==3) active @endif"><a  href="http://127.0.0.1:8000/contacts">Contacts</a>
                                     </li>
-                                    <li class="@if($linkhome==4) active @endif"><a  href="http://127.0.0.1:8000/tyropraphy">Typography</a>
+                                    <li class="@if($linkhome==4) active @endif"><a  href="http://127.0.0.1:8000/search">Search</a>
                                     </li>
                                     <li class="@if($linkhome==5) active @endif"><a  href="http://127.0.0.1:8000/admin">Sing in</a>
                                 </ul>
@@ -113,7 +109,7 @@
                             
                         </div>
                     </div>
-                    <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" active href="http://127.0.0.1:8000/admin" href="#">Sing Up</a></div>
+                    <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" active href="http://127.0.0.1:8000/booking">Booking</a></div>
                 </div>
             </nav>
         </div>

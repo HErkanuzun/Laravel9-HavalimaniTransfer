@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Transfer;
 use App\Models\Category;
 use App\Models\image;
+use App\Models\Location;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -20,12 +21,14 @@ class HomeController extends Controller
         $sliderdata=image::limit(3)->get();
         $transferdata=Transfer::limit(6)->get();
         $categorydata=Category::limit(5)->get();
+        $locationdata=Location::limit(5)->get();
 
         $data=Category::all();
         return view('home.index', ['linkhome'=>1,'data'=>$data,
             'sliderdata'=>$sliderdata,
             'transferdata'=>$transferdata,
             'categorydata'=>$categorydata,
+            'locationdata'=>$locationdata,
     ]);
     }
 
@@ -57,12 +60,14 @@ class HomeController extends Controller
         $sliderdata=image::limit(3)->get();
         $transferdata=Transfer::limit(6)->get();
         $categorydata=Category::limit(5)->get();
+        $locationdata=Location::limit(5)->get();
 
         $data=Category::all();
-        return view('home.search', ['linkhome'=>1,'data'=>$data,
+        return view('home.search', ['linkhome'=>4,'data'=>$data,
             'sliderdata'=>$sliderdata,
             'transferdata'=>$transferdata,
             'categorydata'=>$categorydata,
+            'locationdata'=>$locationdata,
     ]);
     }
 

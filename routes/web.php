@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AdminPanel\HomeController as AdminHomeController;
 
+use App\Http\Controllers\SettingController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\AdminPanel\UserController;
 use App\Http\Controllers\TransferController;
@@ -141,6 +142,18 @@ Route::middleware('auth')->group(function (){
 	Route::get('/admin/user/edit/{id}',[UserController::class, 'admin_user_edit'] )->name('admin_user_edit');
 	Route::post('/admin/user/update/{id}',[UserController::class, 'admin_user_update'] )->name('admin_user_update');
 	Route::get('/admin/user/delete/{id}',[UserController::class, 'admin_user_delete'] )->name('admin_user_delete');
+
+
+	//*******************************SETTING CONTROLLER ROUTE ******************************/
+	Route::get('/admin/setting',[settingController::class, 'admin_setting'] )->name('admin_setting');
+	Route::get('/admin/setting/create',[settingController::class, 'admin_setting_create'] )->name('admin_setting_create');
+	Route::post('/admin/setting/store',[settingController::class, 'admin_setting_store'] )->name('admin_setting_store');
+	Route::get('/admin/setting/show/{id}',[settingController::class, 'admin_setting_show'] )->name('admin_setting_show');
+	Route::get('/admin/setting/edit/{id}',[settingController::class, 'admin_setting_edit'] )->name('admin_setting_edit');
+	Route::post('/admin/setting/update/{id}',[settingController::class, 'admin_setting_update'] )->name('admin_setting_update');
+	Route::get('/admin/setting/delete/{id}',[settingController::class, 'admin_setting_delete'] )->name('admin_setting_delete');
+
+
 	
 	
 	

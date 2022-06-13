@@ -42,9 +42,9 @@
                                     <label class="form-label-outside">From</label>
                                     <div class="form-wrap form-wrap-inline">
                                         <select class="form-input select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="city">
-                                            <option value="1">New York</option>
-                                            <option value="2">Lisbon</option>
-                                            <option value="3">Stockholm</option>
+                                            @foreach ($locationdata as $rs)
+                                                <option value="{{$rs->id}}">{{$rs->name}}</option> 
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -52,9 +52,9 @@
                                     <label class="form-label-outside">To</label>
                                     <div class="form-wrap form-wrap-inline">
                                         <select class="form-input select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="city">
-                                            <option value="1">Chicago</option>
-                                            <option value="2">Madrid</option>
-                                            <option value="3">Paris</option>
+                                            @foreach ($locationdata as $rs)
+                                                <option value="{{$rs->id}}">{{$rs->name}}</option> 
+                                            @endforeach
                                         </select>
                                     </div>
                                 </div>
@@ -70,11 +70,11 @@
                                         <!--  option(value="3") Middle-->
                                     </div>
                                 </div>
-                                <div class="col-sm-12 col-lg-6">
+                                <div class="justify-content-sm-center col-sm-12 col-lg-6 ">
                                     <label class="form-label-outside">Duration</label>
-                                    <div class="form-wrap form-wrap-validation">
+                                    <div class="form-wrap form-wrap-validation ">
                                         <!-- Select 2-->
-                                        <select class="form-input select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="city">
+                                        <select class="form-input select-filter " data-placeholder="All" data-minimum-results-for-search="Infinity" name="city">
                                             <option value="1">Any length</option>
                                             <option value="2">2 days</option>
                                             <option value="3">3 days</option>
@@ -82,21 +82,15 @@
                                         </select>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
+                                <div class="col">
                                     <label class="form-label-outside">Adults</label>
                                     <div class="form-wrap form-wrap-modern">
                                         <input class="form-input input-append" id="form-element-stepper" type="number" min="0" max="300" value="2">
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <label class="form-label-outside">Children</label>
-                                    <div class="form-wrap form-wrap-modern">
-                                        <input class="form-input input-append" id="form-element-stepper-1" type="number" min="0" max="300" value="0">
-                                    </div>
-                                </div>
                             </div>
                             <div class="form-wrap form-button">
-                                <button class="button button-block button-secondary" type="submit">search flight</button>
+                                <button class="button button-block button-secondary" type="submit">search booking</button>
                             </div>
                         </form>
                     </div>
