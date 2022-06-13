@@ -7,79 +7,66 @@ use Illuminate\Http\Request;
 
 class SettingController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function admin_setting()
-    {
-        return view('admin.setting.index',['link'=>9]);
+    public function index(){
+        return view('admin.setting.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
+    public function admin_setting(){
+
+        $data = Setting::first();
+        if($data==null){
+            $data=new Setting();
+            $data->title='project title';
+            $data->save();
+            $data = Setting::first();
+        }
+
+        return view('admin.setting.index',[
+            'data'=>$data,
+            'link'=>9
+        ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
+    public function admin_setting_edit (){
+        $data = Setting::first();
+        return view('admin.setting.edit',[
+            'data'=>$data,
+            'link'=>9,
+        ]);
+
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\setting  $setting
-     * @return \Illuminate\Http\Response
-     */
-    public function show(setting $setting)
-    {
-        //
+   public function admin_setting_update(Request $request, Setting $Setting){
+        $data = Setting::first();
+
+        
+        $data->title = $request->title;  
+
+        $data->keywords = $request->keywords;
+
+        $data->description = $request->description;
+        
+        $data->company = $request->company;
+        $data->address = $request->address;
+        $data->phone = $request->phone;
+        $data->fax = $request->fax;
+        $data->email = $request->email;
+        $data->smtpserver = $request->smtpserver;
+        $data->smtpemail = $request->smtpemail;
+        $data->smtppassword = $request->smtppassword;
+        $data->smtpport = $request->smtpport;
+        $data->facebook = $request->facebook;
+        $data->instagram = $request->instagram;
+        $data->twitter = $request->twitter;
+        $data->aboutus = $request->aboutus;
+        $data->contact = $request->contact;
+        $data->references = $request->references;
+        $data->status = $request->status;
+        $data->save();
+        
+       return redirect(route('admin_setting'));
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\setting  $setting
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(setting $setting)
-    {
-        //
-    }
+   
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\setting  $setting
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, setting $setting)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\setting  $setting
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(setting $setting)
-    {
-        //
-    }
 }

@@ -6,6 +6,7 @@ use App\Models\Transfer;
 use App\Models\Category;
 use App\Models\image;
 use App\Models\Location;
+use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -37,11 +38,22 @@ class HomeController extends Controller
         return view('home.aboutus', ['linkhome'=>2]);
     }
 
-    public function contacts()
-    {
-        return view('home.contact', ['linkhome'=>3]);
+    public function home_contact(){
+        $data = Setting::first()->contact;
+        return view('home.contact',[
+            'data'=>$data,
+            'linkhome'=>3
+        ,
+        ]);
     }
+    public function home_references(){
 
+        $data = Setting::first()->references;
+        return view('home.reference',[
+            'data'=>$data,
+            'linkhome'=>5
+        ]);
+    }
 
     public function home_test()
     {
@@ -61,6 +73,7 @@ class HomeController extends Controller
         $transferdata=Transfer::limit(6)->get();
         $categorydata=Category::limit(5)->get();
         $locationdata=Location::limit(5)->get();
+        $settingdata=Setting::limit(5)->get();
 
         $data=Category::all();
         return view('home.search', ['linkhome'=>4,'data'=>$data,
@@ -68,6 +81,7 @@ class HomeController extends Controller
             'transferdata'=>$transferdata,
             'categorydata'=>$categorydata,
             'locationdata'=>$locationdata,
+            'settingdata'=>$settingdata,
     ]);
     }
 

@@ -2,6 +2,10 @@
 @section('title','')
 @include("home.header")
 @section('content')
+@extends('layouts.frontbase')
+@section('title','')
+@include("home.header")
+@section('content')
 
     <div class="page">
         <!-- Page Header-->
@@ -105,5 +109,14 @@
     </div>
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"> </div>
+
+@endsection
+
+<div class="container" style="border-radius: 20px; background-color:rgb(241, 255, 238); text-align:center;">
+    <h2>References</h2>
+ 
+    <p>{{ $data }}</p>
+ 
+     </div>
 
 @endsection

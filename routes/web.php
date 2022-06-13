@@ -54,13 +54,15 @@ Route::get('/booking',[BookingController::class,'index'])->name('booking_getir')
 //*************************** HOME CONTROLLER ROUTES ***************************//
 Route::controller(HomeController::class)->group(function(){
 	Route::get('/', 'index' )->name('home');
-	Route::get('/contacts',  'contacts')->name('contacts_page');
 	Route::get('/aboutus', 'aboutus')->name("about_us_page");
 	Route::get('/singlepage', 'single_page')->name("single_page");
 	Route::get('/konumhsp',  'home_konumhsp')->name('home_konumhsp');
 	Route::get('/faq', 'index')->name('home_faq');	
 	Route::get('/search', 'home_search')->name('search');	
 	Route::get('/test', 'home_test')->name('test');	
+	Route::get('/contact', 'home_contact')->name('contact');	
+	Route::get('/references', 'home_references')->name('references');	
+	
 
 });
 
@@ -121,6 +123,7 @@ Route::middleware('auth')->group(function (){
 	    Route::get('/image-galery','admin_image_galery')->name('_galery');
 	});
 
+	//**************************SETTING CONTROLLER ROUTE ********************************/
 	Route::prefix('admin/slider')->name('admin_slider')->controller(ImageController::class)->group(function (){
 
 		Route::get('/index', 'admin_slider_index' )->name('_index');
