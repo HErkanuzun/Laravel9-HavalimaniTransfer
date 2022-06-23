@@ -15,7 +15,7 @@
                 <ul class="breadcrumbs-custom-path">
                     <li><a href="index.html">Home</a></li>
                     <li><a href="#">Pages</a></li>
-                    <li class="active">Single Tour</li>
+                    <li class="active">{{$transferdata->title}}</li>
                 </ul>
             </div>
         </section>

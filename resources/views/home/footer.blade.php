@@ -9,11 +9,11 @@
             </div>
             <div class="col-md-10 col-lg-7 col-xl-4 text-xl-right">
                 <ul class="group-xs group-middle">
-                    <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-facebook" href="#"></a></li>
-                    <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-twitter" href="#"></a></li>
-                    <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-instagram" href="#"></a></li>
-                    <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-google" href="#"></a></li>
-                    <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-linkedin" href="#"></a></li>
+                    
+                    <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-facebook" href="https://www.linkedin.com/in/hasan-erkan-uzun-0759401aa/"></a></li>
+                    <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-twitter" href="https://www.linkedin.com/in/hasan-erkan-uzun-0759401aa/"></a></li>
+                    <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-instagram" href="https://www.linkedin.com/in/hasan-erkan-uzun-0759401aa/"></a></li>
+                    <li><a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-linkedin" href="https://www.linkedin.com/in/hasan-erkan-uzun-0759401aa/"></a></li>
                 </ul>
             </div>
         </div>

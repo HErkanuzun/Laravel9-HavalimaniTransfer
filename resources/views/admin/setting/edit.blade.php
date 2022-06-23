@@ -82,8 +82,8 @@
             <input type="text" class="form-control" value="{{ $data->twitter }}"  placeholder="0" name="twitter">
           </div>
           <div class="form-group">
-            <label for="exampleInputEmail1">aboutus</label>
-            <input type="text" class="form-control" value="{{ $data->instagram }}"  placeholder="0" name="aboutus">
+            <label for="exampleInputEmail1">linkedin</label>
+            <input type="text" class="form-control" value="{{ $data->linkedin }}"  placeholder="0" name="aboutus">
           </div>
           <div class="form-group">
             <label for="exampleInputEmail1">contact</label>

@@ -110,7 +110,7 @@
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                             <a class="dropdown-item" href="/admin">Dashboard</a>
-                                            <a class="dropdown-item" href="/user/profile">Profile</a>
+                                            <a class="dropdown-item" href="/admin/profile">Profile</a>
                                             <form action="/logout" method="post">@csrf<button class="dropdown-item" type="submit">Log out</button></form>
                                         </div>
                                         @else

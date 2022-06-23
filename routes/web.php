@@ -48,8 +48,7 @@ Route::get('/welcome', function () {
 	})->name('dashboard');
 	return view('welcome');
 });
-//*************************** BOOKING CONTROLLER ROUTES ***************************//
-Route::get('/booking',[BookingController::class,'index'])->name('booking_getir');
+
 
 //*************************** HOME CONTROLLER ROUTES ***************************//
 Route::controller(HomeController::class)->group(function(){
@@ -62,6 +61,7 @@ Route::controller(HomeController::class)->group(function(){
 	Route::get('/test', 'home_test')->name('test');	
 	Route::get('/contact', 'home_contact')->name('contact');	
 	Route::get('/references', 'home_references')->name('references');	
+	Route::get('/transfer/{id}', 'home_transfer')->name('references');	
 	
 
 });
@@ -75,10 +75,19 @@ Route::middleware('auth')->group(function (){
 	Route::get('/admin/billing',[AdminHomeController::class, 'billing_getir'])->name('admin_billing');
 	Route::get('/admin/profile',[AdminHomeController::class, 'profile_getir'])->name('admin_profile');
 	Route::get('/admin/location',[AdminHomeController::class, 'location_getir'])->name('admin_add_location');
+	Route::get('/admin/test',[AdminHomeController::class, 'test_getir'])->name('admin_add_test');
 	//additional
 	//Route::get('/singin',[AdminHomeController::class, 'singin_getir'])->name('admin_singin');
 	//Route::get('/singup',[AdminHomeController::class, 'singup_getir'])->name('admin_singup');
 	
+
+
+	//*************************** BOOKING CONTROLLER ROUTES ***************************//
+	Route::get('/booking',[BookingController::class,'index'])->name('booking_getir');
+	Route::get('/booking/show/{id}',[BookingController::class,'show'])->name('booking_show_getir');
+
+
+
 	//**************************CATEGORY CONTROLLER ROUTE *************************/
 	Route::get('/admin/category',[CategoryController::class, 'admin_category_getir'] )->name('admin_category');
 	Route::get('/admin/category/create',[CategoryController::class, 'admin_category_create'] )->name('admin_category_create');

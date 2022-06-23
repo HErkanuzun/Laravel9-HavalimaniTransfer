@@ -2,8 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Booking;
-use Illuminate\Http\Request;
+use App\Models\Transfer;
+use App\Models\Category;
+use App\Models\image;
+use App\Models\Location;
+use App\Models\Setting;
+use Illuminate\Http\Request;;
 
 class BookingController extends Controller
 {
@@ -14,7 +18,25 @@ class BookingController extends Controller
      */
     public function index()
     {
-        return view('home.booking',['linkhome'=>5]);
+        $sliderdata=image::limit(3)->get();
+        $transferdata=Transfer::limit(6)->get();
+        $categorydata=Category::limit(5)->get();
+        $locationdata=Location::limit(5)->get();
+        $settingdata=Setting::limit(5)->get();
+        $categorydata=Category::limit(5)->get();
+        $data = Setting::first()->contact;
+        $imagedata=image::limit(10)->get();
+        $sosyaldata=Setting::limit(5)->get();
+        
+        return view('home.booking',['linkhome'=>5,
+        'sliderdata'=>$sliderdata,
+        'transferdata'=>$transferdata,
+        'categorydata'=>$categorydata,
+        'locationdata'=>$locationdata,
+        'imagedata'=>$imagedata,
+        'sosyaldata'=>$sosyaldata,
+
+    ]);
     }
 
     /**
@@ -44,9 +66,27 @@ class BookingController extends Controller
      * @param  \App\Models\Booking  $booking
      * @return \Illuminate\Http\Response
      */
-    public function show(Booking $booking)
+    public function show(Booking $booking, $id)
     {
-        //
+        $sliderdata=image::limit(3)->get();
+        $transferdata=Transfer::limit(6)->get();
+        $categorydata=Category::limit(7)->get();
+        $locationdata=Location::limit(5)->get();
+        $imagedata=image::limit(10)->get();
+        $sosyaldata=Setting::limit(5)->get();
+        $bookingshow=Transfer::find($id);
+
+        $data=Category::all();
+        return view('home.booking.show', ['linkhome'=>1,
+            'data'=>$data,
+            'sliderdata'=>$sliderdata,
+            'transferdata'=>$transferdata,
+            'categorydata'=>$categorydata,
+            'locationdata'=>$locationdata,
+            'imagedata'=>$imagedata,
+            'sosyaldata'=>$sosyaldata,
+
+    ]);
     }
 
     /**

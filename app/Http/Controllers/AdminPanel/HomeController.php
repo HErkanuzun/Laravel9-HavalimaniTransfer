@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\AdminPanel;
 
+use App\Models\User;
 use App\Http\Controllers\Controller;
+use App\Models\image;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -32,7 +34,12 @@ class HomeController extends Controller
 
     public function profile_getir()
     {
-        return view('admin.profile',['link'=>8]);
+        $profiledata=User::limit(1)->get();
+        $image=image::limit(10)->get();
+        return view('admin.profile',['link'=>8,
+        'profiledata'=>$profiledata,
+        'image'=>$image,
+    ]);
     }
 
     public function singin_getir()
@@ -43,6 +50,10 @@ class HomeController extends Controller
     public function singup_getir()
     {
         return view('admin.singup',['link'=>9]);
+    }
+    public function test_getir()
+    {
+        return view('admin.admintest',['link'=>9]);
     }
 
 

@@ -96,6 +96,21 @@
 	<p  style="font-size:130%;text-align:center;">Nokta Ekleyin</p>
     <div class="col-md-6">
 	<p align="center"><input class="form-input" type="text" name="enlem1" id="enlem1"  placeholder="Enlem" >
+
+		<select class="form-input select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="enlem1" id="enlem1">
+            @foreach ($locationdata as $rs)
+                <option value="{{$rs->id}}">{{$rs->lat}}</option> 
+            @endforeach
+        </select>
+
+
+		<select class="form-input select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="boylam1" id="enlem1">
+            @foreach ($locationdata as $rs)
+                <option value="{{$rs->id}}">{{$rs->long}}</option> 
+            @endforeach
+        </select>
+
+
 	<input class="form-input" type="text" name="boylam1" id="boylam1"  placeholder="Boylam"></p>
 	<div class="d-flex justify-content-center align-items-center">
 		<button class="button mx-1 pust-button button-secondary button-nina" id="buton1" onclick="ekle()" >Ekle</button>

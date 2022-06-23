@@ -26,10 +26,11 @@
                         </div>
                         
                         <div class="event-default-inner">
-                            <h5><a class="event-default-title" href="#">{{$rs->name}}</a></h5><span class="heading-5">{{$rs->base_price}}</span>
+                            <h5><a class="event-default-title" href="#">{{$rs->name}}</a></h5><span class="heading-5">${{$rs->base_price}}</span>
                         </div>
                     </article>
                 </div>
+
                 @endforeach
 
             </div>
